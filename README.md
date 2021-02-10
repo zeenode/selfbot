@@ -2,7 +2,7 @@
 
 ### About the project
 
-- This project is mainly made for people who want to understand discord.py lib for python so that they can develop their skills in using it. Zeenode is a Discord Selfbot with many features that will be listed below, to note, Discord prohibits Selfbots so if you want to use this you will use it at your own risk.
+- This project is mainly made for people who want to understand discord.py lib for python so that they can develop their skills in using it. Discord prohibits Selfbots so if you want to use this you will use it at your own risk.
 
 ### WARNING!!!
 
@@ -13,14 +13,7 @@
 
 
 ## How to install and use Zeenode?
-
-    Launch "install.bat" to install all modules.
-    
-    Put in main.py your prefix for commands. (Line 6.)
-    
-    Put in config.json your token.
-    
-    Launch "launch.bat" to launch Zeenode SelfBot.
+???? soon
 
 ## Disclaimer:
 
