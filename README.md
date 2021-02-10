@@ -10,23 +10,7 @@
 
 - This in short means that Discord prohibits any form of bots and automation, which means that selfbot is prohibited by ToS. This is for educational purposes only, if you want to use it use it at your own risk. We do not take any responsibility for you.
 
-## Features
-- some
-- features
-- that
-- zeenode
-- has
 
-## Commands
-#### Fun
-- commands
-- list 
-- that
-#### Main
-- zeenode 
-- have
-#### Miscellaneous
-- enjoy!
 
 ## How to install and use Zeenode?
 
