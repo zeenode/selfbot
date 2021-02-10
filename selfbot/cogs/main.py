@@ -1,6 +1,6 @@
 import discord, requests
 from discord.ext import commands
-from ..login import token
+from ..load import token
 
 Output = "Zeenode || "
 
@@ -42,6 +42,8 @@ class Main(commands.Cog):
             print(f"{Output}Succesfully set your HypeSquad house to {house}!")
         except:
             print(f"{Output}Failed to set your HypeSquad house to {house}.")
+        else:
+            self.ctx.message.channel.send('That option is invalid. Please enter some of these options: bravery, brilliance, balance')
 
 
     @commands.command()

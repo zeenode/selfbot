@@ -1,7 +1,6 @@
 import discord, pyfiglet, requests, random, string
 from colorama import Fore, Back, Style 
 from discord.ext import commands
-from ..login import token
 
 class Fun(commands.Cog):
     def __init__(self, bot):

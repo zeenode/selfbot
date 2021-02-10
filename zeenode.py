@@ -1,3 +1,3 @@
-from selfbot.login import login
+from selfbot.load import load
 
-login()
+load()
