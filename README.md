@@ -13,7 +13,9 @@
 
 
 ## How to install and use Zeenode?
-???? soon
+You don't. Unless you pay of course.
+Jk neka neko updata ovo kad budemo zavrsili sa Windows verzijom installa i GNU/Linux.
+
 
 ## Disclaimer:
 
