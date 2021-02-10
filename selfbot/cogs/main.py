@@ -1,11 +1,10 @@
-import discord, json, pyfiglet, requests, random, string, urllib
-from colorama import Fore, Back, Style 
+import discord, requests
 from discord.ext import commands
 from ..login import token
 
 Output = "Zeenode || "
 
-class Extra(commands.Cog):
+class Main(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -62,4 +61,4 @@ class Extra(commands.Cog):
                 pass
 
 def setup(bot):
-    bot.add_cog(Extra(bot))
+    bot.add_cog(Main(bot))

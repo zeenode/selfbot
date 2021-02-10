@@ -1,4 +1,4 @@
-import discord, json, pyfiglet, requests, random, string, urllib
+import discord, pyfiglet, requests, random, string
 from colorama import Fore, Back, Style 
 from discord.ext import commands
 from ..login import token

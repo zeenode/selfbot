@@ -10,7 +10,7 @@ class login:
         token = input()
         
         bot.load_extension("selfbot.cogs.fun")
-        bot.load_extension("selfbot.cogs.extra")
+        bot.load_extension("selfbot.cogs.main")
 
         @bot.event
         async def on_ready():
