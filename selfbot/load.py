@@ -2,7 +2,6 @@ from colorama.ansi import Fore
 from discord.ext import commands as zeenode
 from selfbot.config import auth, prefix
 import requests
-import termtables as tt
 
 bot = zeenode.Bot(command_prefix=prefix, self_bot=True)
 
