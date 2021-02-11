@@ -1,4 +1,4 @@
-from discord.ext import zeenode
+from discord.ext import commands as zeenode
 import re
 import requests
 from selfbot.load import token
