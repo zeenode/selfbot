@@ -3,7 +3,7 @@ from colorama import Fore, init
 from discord.ext import commands as zeenode
 from zeenode.config import auth, prefix
 
-init(convert=True)
+init(convert=False)
 
 bot = zeenode.Bot(command_prefix=prefix, self_bot=True)
 
@@ -44,15 +44,15 @@ class load:
             token = authorization
             return token
         else:
-            print("Check /selfbot/config.py file to setup auto-login with token (If you have already set token there please make sure token is valid)")
+            print("Check /zeenode/config.py file to setup auto-login with token (If you have already set token there please make sure token is valid)")
             print("Please insert your token below:")
             token_input = input()
             token = token_input
             return token
     def load_cogs(self):
          # Loading commands
-        bot.load_extension("selfbot.cogs.fun")
-        bot.load_extension("selfbot.cogs.main")
+        bot.load_extension("zeenode.cogs.fun")
+        bot.load_extension("zeenode.cogs.main")
 
         # Loading events
-        bot.load_extension("selfbot.events.on_message")
+        bot.load_extension("zeenode.events.on_message")
