@@ -1,5 +1,5 @@
 import discord, requests
-from discord.ext import zeenode
+from discord.ext import commands as zeenode
 from selfbot.load import token
 
 Output = "Zeenode || "
