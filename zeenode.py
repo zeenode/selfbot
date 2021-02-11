@@ -1,3 +1,3 @@
-from selfbot.load import load
+from zeenode.load import load
 
 load()
