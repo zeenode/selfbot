@@ -69,4 +69,5 @@ def RandString():
     return "".join(random.choice(string.ascii_letters + string.digits) for i in range(random.randint(4, 4)))
 
 def setup(bot):
+    print("[+] fun cog loaded!")
     bot.add_cog(Fun(bot))

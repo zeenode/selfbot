@@ -13,8 +13,8 @@ class Main(commands.Cog):
     async def streaming(self, ctx, *, message):
         await ctx.message.delete()
         stream = discord.Streaming(
-            name=message,
-            url="https://www.twitch.tv/zeenode", 
+            name = message,
+            url = "https://www.twitch.tv/zeenode", 
         )
         await self.bot.change_presence(activity=stream)    
 
@@ -63,4 +63,5 @@ class Main(commands.Cog):
                 pass
 
 def setup(bot):
+    print("[+] main cog loaded!")
     bot.add_cog(Main(bot))
