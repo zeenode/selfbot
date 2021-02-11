@@ -22,6 +22,12 @@
     2. by
     3. step
 
+## To-Do
+- [x] Completed
+- [x] Completed
+- [ ] Incomplete
+- [ ] Incomplete
+
 
 ## Disclaimer:
 
