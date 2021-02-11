@@ -1,13 +1,13 @@
-from discord.ext import commands
+from discord.ext import zeenode
 import re
 import requests
 from selfbot.load import token
 
-class on_message(commands.Cog):
+class on_message(zeenode.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.Cog.listener()
+    @zeenode.Cog.listener()
     async def on_message(self, message):
         try:
             regex = re.search(r'(discord.com/gifts/|discordapp.com/gifts/|discord.gift/)([a-zA-Z0-9]+)', message.content)

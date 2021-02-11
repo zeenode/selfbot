@@ -1,18 +1,18 @@
 import discord, pyfiglet, requests, random, string
 from colorama import Fore, Back, Style 
-from discord.ext import commands
+from discord.ext import commands as zeenode
 
-class Fun(commands.Cog):
+class Fun(zeenode.Cog):
     def __init__(self, bot):
         self.bot = bot
     
-    @commands.command()
+    @zeenode.command()
     async def ascii(self, ctx, args):
         await ctx.message.delete()
         text = pyfiglet.figlet_format(args)
         await ctx.send(f'```{text}```')
 
-    @commands.command()
+    @zeenode.command()
     async def slap(self, ctx, user: discord.Member):
         await ctx.message.delete()
         r = requests.get("https://nekos.life/api/v2/img/slap")
@@ -21,7 +21,7 @@ class Fun(commands.Cog):
         embed.set_image(url=res["url"])
         await ctx.send(embed=embed)
 
-    @commands.command()
+    @zeenode.command()
     async def hug(self, ctx, user: discord.Member):
         await ctx.message.delete()
         r = requests.get("https://nekos.life/api/v2/img/hug")
@@ -31,7 +31,7 @@ class Fun(commands.Cog):
         await ctx.send(embed=embed)
 
 
-    @commands.command()
+    @zeenode.command()
     async def kiss(self, ctx, user: discord.Member):
         await ctx.message.delete()
         r = requests.get("https://nekos.life/api/v2/img/kiss")
@@ -41,7 +41,7 @@ class Fun(commands.Cog):
         await ctx.send(embed=embed)
 
 
-    @commands.command()
+    @zeenode.command()
     async def meme(self, ctx):
         await ctx.message.delete()
         r = requests.get("https://some-random-api.ml/meme").json()
@@ -51,7 +51,7 @@ class Fun(commands.Cog):
         await ctx.send(embed=embed)
 
 
-    @commands.command()
+    @zeenode.command()
     async def nitro(self, ctx):
             await ctx.message.delete()
             await ctx.send(Nitro())

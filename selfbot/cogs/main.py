@@ -1,15 +1,15 @@
 import discord, requests
-from discord.ext import commands
+from discord.ext import zeenode
 from selfbot.load import token
 
 Output = "Zeenode || "
 
-class Main(commands.Cog):
+class Main(zeenode.Cog):
     def __init__(self, bot):
         self.bot = bot
 
 
-    @commands.command()
+    @zeenode.command()
     async def streaming(self, ctx, *, message):
         await ctx.message.delete()
         stream = discord.Streaming(
@@ -19,7 +19,7 @@ class Main(commands.Cog):
         await self.bot.change_presence(activity=stream)    
 
 
-    @commands.command()
+    @zeenode.command()
     async def hypesquad(self, ctx, house):
         await ctx.message.delete()
         request = requests.session()
@@ -44,14 +44,14 @@ class Main(commands.Cog):
             print(f"{Output}Failed to set your HypeSquad house to {house}.") 
 
 
-    @commands.command()
+    @zeenode.command()
     async def embed(self, ctx, title, *, description):
             await ctx.message.delete()
             embed=discord.Embed(title=title, description=description)
             await ctx.send(embed=embed)
 
 
-    @commands.command()
+    @zeenode.command()
     async def purge(self, ctx, amount: int):
         await ctx.message.delete()
         async for message in ctx.message.channel.history(limit=amount).filter(lambda m: m.author == self.bot.user).map(lambda m: m):

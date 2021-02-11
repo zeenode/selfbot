@@ -1,10 +1,10 @@
 from colorama.ansi import Fore
-from discord.ext import commands
+from discord.ext import zeenode
 from selfbot.config import auth, prefix
 import requests
 import termtables as tt
 
-bot = commands.Bot(command_prefix=prefix, self_bot=True)
+bot = zeenode.Bot(command_prefix=prefix, self_bot=True)
 
 class load:
     def __init__(self):
