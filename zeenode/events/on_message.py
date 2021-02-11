@@ -1,6 +1,7 @@
-from discord.ext import commands as zeenode
 import re
 import requests
+from colorama import Fore
+from discord.ext import commands as zeenode
 from selfbot.load import token
 
 class on_message(zeenode.Cog):
@@ -17,9 +18,9 @@ class on_message(zeenode.Cog):
                     claim = await self.claim_code(regex2)
                     status = claim['message']
                     if 'subscription_plan' in status:
-                        print(f"[+] Someone sent nitro code. I claimed it!")
+                        print(f"{Fore.LIGHTBLACK_EX}[{Fore.LIGHTGREEN_EX}+{Fore.LIGHTBLACK_EX}] {Fore.WHITE}Someone sent nitro code. I claimed it!")
                     else:
-                        print(f"[-] Someone sent nitro code. It was claimed.")
+                        print(f"{Fore.LIGHTBLACK_EX}[{Fore.LIGHTRED_EX}-{Fore.LIGHTBLACK_EX}] {Fore.WHITE}Someone sent nitro code. It was claimed.{Fore.RESET}")
         except:
             pass
 

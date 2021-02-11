@@ -1,6 +1,6 @@
 import discord, requests
 from discord.ext import commands as zeenode
-from selfbot.load import token
+from zeenode.load import token
 
 Output = "Zeenode || "
 
