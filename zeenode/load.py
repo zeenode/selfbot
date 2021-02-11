@@ -1,8 +1,9 @@
 import requests, colorama
-from colorama import Fore
+from colorama import Fore, init
 from discord.ext import commands as zeenode
-from selfbot.config import auth, prefix
+from zeenode.config import auth, prefix
 
+init(convert=True)
 
 bot = zeenode.Bot(command_prefix=prefix, self_bot=True)
 
