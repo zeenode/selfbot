@@ -1,5 +1,5 @@
 from colorama.ansi import Fore
-from discord.ext import zeenode
+from discord.ext import commands as zeenode
 from selfbot.config import auth, prefix
 import requests
 import termtables as tt
