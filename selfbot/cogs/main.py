@@ -1,6 +1,6 @@
 import discord, requests
 from discord.ext import commands
-from ..load import token
+from selfbot.load import token
 
 Output = "Zeenode || "
 
@@ -41,9 +41,7 @@ class Main(commands.Cog):
             requests.post('https://discordapp.com/api/v6/hypesquad/online', headers=headers, json=payload)
             print(f"{Output}Succesfully set your HypeSquad house to {house}!")
         except:
-            print(f"{Output}Failed to set your HypeSquad house to {house}.")
-        else:
-            self.ctx.message.channel.send('That option is invalid. Please enter some of these options: bravery, brilliance, balance')
+            print(f"{Output}Failed to set your HypeSquad house to {house}.") 
 
 
     @commands.command()
