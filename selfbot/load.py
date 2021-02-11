@@ -42,7 +42,7 @@ class load:
             token = authorization
             return token
         else:
-            print("Check /selfbot/config.py file to setup auto-login with token (If you have already set token there make sure token is valid)")
+            print("Check /selfbot/config.py file to setup auto-login with token (If you have already set token there please make sure token is valid)")
             print("Please insert your token below:")
             token_input = input()
             token = token_input
