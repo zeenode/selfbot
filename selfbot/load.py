@@ -1,4 +1,4 @@
-from colorama.ansi import Fore
+from colorama import Fore
 from discord.ext import commands as zeenode
 from selfbot.config import auth, prefix
 import requests
