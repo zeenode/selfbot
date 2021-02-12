@@ -4,6 +4,9 @@ from colorama import Fore
 from discord.ext import commands as zeenode
 from zeenode.load import token
 from zeenode.config import nitro_sniper
+from datetime import datetime
+
+time = datetime.now().strftime("%H:%M:%S")
 
 class on_message(zeenode.Cog):
     def __init__(self, bot):
@@ -20,9 +23,9 @@ class on_message(zeenode.Cog):
                         claim = await self.claim_code(regex2)
                         status = claim['message']
                         if 'subscription_plan' in status:
-                            print(f"{Fore.LIGHTBLACK_EX}[{Fore.LIGHTGREEN_EX}+{Fore.LIGHTBLACK_EX}] {Fore.WHITE}Someone sent nitro code. I claimed it!")
+                            print(f"{Fore.LIGHTBLACK_EX}[{Fore.LIGHTGREEN_EX}{time}{Fore.LIGHTBLACK_EX}] {Fore.LIGHTBLACK_EX}[{Fore.LIGHTGREEN_EX}+{Fore.LIGHTBLACK_EX}] {Fore.WHITE}Someone sent nitro gift code ({Fore.LIGHTGREEN_EX}{regex2}{Fore.WHITE}). I claimed it!")
                         else:
-                            print(f"{Fore.LIGHTBLACK_EX}[{Fore.LIGHTRED_EX}-{Fore.LIGHTBLACK_EX}] {Fore.WHITE}Someone sent nitro code. It was claimed.{Fore.RESET}")
+                            print(f"{Fore.LIGHTBLACK_EX}[{Fore.LIGHTRED_EX}{time}{Fore.LIGHTBLACK_EX}] {Fore.LIGHTBLACK_EX}[{Fore.LIGHTRED_EX}-{Fore.LIGHTBLACK_EX}] {Fore.WHITE}Someone sent nitro gift code ({Fore.LIGHTRED_EX}{regex2}{Fore.WHITE}). But it was claimed.{Fore.RESET}")
             except:
                 pass
         else:

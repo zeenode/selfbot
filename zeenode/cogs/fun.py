@@ -1,6 +1,5 @@
-import discord, pyfiglet, requests, random, string
-from colorama import Fore, Back, Style 
-from discord.ext import commands as zeenode
+import discord, pyfiglet, requests, random, string 
+from discord.ext import commands as zeenode 
 
 class Fun(zeenode.Cog):
     def __init__(self, bot):
