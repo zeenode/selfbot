@@ -50,11 +50,17 @@
 ## Notice:
 
 Activity Status like:
+
 $watching owersite
+
 or
+
 $listening owersite
+
 won't work if you actually have already an activity!
+
 **ONLY** $streaming will work.
+
 
 ## Disclaimer:
 
