@@ -57,6 +57,10 @@ or
 
 $listening owersite
 
+or
+
+$playing owersite
+
 won't work if you actually have already an activity!
 
 **ONLY** $streaming will work.
