@@ -28,6 +28,10 @@ $*kiss* @user - Sends a kiss to user. ( Works in servers + DMs )
 
 $*slap* @user - Sends a slap to user. ( Works in servers + DMs )
 
+$*nitro* - Sends a nitro. ( Works in servers + DMs ) 
+
+$*meme* - Sends a meme. ( Works in servers + DMs )
+
 - Main
 
 $
