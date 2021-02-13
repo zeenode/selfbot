@@ -14,30 +14,7 @@ class Main(zeenode.Cog):
 
 
 
- @zeenode.command(aliases=['pfp', 'avatar'])
-    async def av(self, ctx, *, user: discord.User = None):
-        await ctx.message.delete()
-        format = "gif"
-        user = user or ctx.author
-        if user.is_avatar_animated() != True:
-            format = "png"
-        avatar = user.avatar_url_as(format=format if format != "gif" else None)
-        async with aiohttp.ClientSession() as session:
-            async with session.get(str(avatar)) as resp:
-                image = await resp.read()
-        with io.BytesIO(image) as file:
-            await ctx.send(file=discord.File(file, f"Avatar.{format}"))
-    
-
-
-@zeenode.command()
-    async def guildicon(self, ctx):
-        await ctx.message.delete()
-        embed = discord.Embed(color=0x0000)
-        embed.set_author(name=ctx.guild.name, icon_url=ctx.guild.icon_url)   
-        embed.set_image(url=ctx.guild.icon_url)
-        await ctx.send(embed=embed)
-    
+ 
 
     @zeenode.command()
     async def ascii(self, ctx, args):
@@ -75,7 +52,30 @@ class Main(zeenode.Cog):
             await ctx.message.delete()
             embed=discord.Embed(title=title, description=description)
             await ctx.send(embed=embed)
+    @zeenode.command(aliases=['pfp', 'avatar'])
+    async def av(self, ctx, *, user: discord.User = None):
+        await ctx.message.delete()
+        format = "gif"
+        user = user or ctx.author
+        if user.is_avatar_animated() != True:
+            format = "png"
+        avatar = user.avatar_url_as(format=format if format != "gif" else None)
+        async with aiohttp.ClientSession() as session:
+            async with session.get(str(avatar)) as resp:
+                image = await resp.read()
+        with io.BytesIO(image) as file:
+            await ctx.send(file=discord.File(file, f"Avatar.{format}"))
+    
 
+
+    @zeenode.command()
+    async def guildicon(self, ctx):
+        await ctx.message.delete()
+        embed = discord.Embed(color=0x0000)
+        embed.set_author(name=ctx.guild.name, icon_url=ctx.guild.icon_url)   
+        embed.set_image(url=ctx.guild.icon_url)
+        await ctx.send(embed=embed)
+    
 
     @zeenode.command()
     async def purge(self, ctx, amount: int):
