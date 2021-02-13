@@ -5,8 +5,7 @@ class Fun(zeenode.Cog):
     def __init__(self, bot):
         self.bot = bot
     
-    
-    
+   
     @zeenode.command()
     async def slap(self, ctx, user: discord.User = None):
         await ctx.message.delete()
@@ -16,6 +15,7 @@ class Fun(zeenode.Cog):
         embed.set_image(url=res["url"])
         await ctx.send(embed=embed)
 
+        
     @zeenode.command()
     async def hug(self, ctx, user: discord.User = None):
         await ctx.message.delete()
@@ -25,6 +25,7 @@ class Fun(zeenode.Cog):
         embed.set_image(url=res["url"])
         await ctx.send(embed=embed)
 
+        
     @zeenode.command(aliases=['dong', 'penis'])
     async def dick(self, ctx, *, user: discord.User = None):
         await ctx.message.delete()
@@ -36,10 +37,8 @@ class Fun(zeenode.Cog):
             dong += "="
         em = discord.Embed(title=f"{user}'s Dick size:", description=f"8{dong}D", colour=0x0000)
         await ctx.send(embed=em)
-    
-
-    
-    
+        
+        
     @zeenode.command()
     async def kiss(self, ctx, user: discord.User = None):
         await ctx.message.delete()
@@ -48,11 +47,7 @@ class Fun(zeenode.Cog):
         embed = discord.Embed(description=f"**{ctx.author.mention} kissed {user.mention}!**", color=RandomColor())
         embed.set_image(url=res["url"])
         await ctx.send(embed=embed)
-     
    
-    
-    
-    
 
     @zeenode.command()
     async def meme(self, ctx):
