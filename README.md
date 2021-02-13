@@ -14,7 +14,7 @@
 
 ## Commands
 
-- Main
+- Fun
 
 $*av* - Sends your avatar in the chat. ( Works in servers + DMs )
 
@@ -28,7 +28,7 @@ $*kiss* @user - Sends a kiss to user. ( Works in servers + DMs )
 
 $*slap* @user - Sends a slap to user. ( Works in servers + DMs )
 
-- Fun
+- Main
 
 $
 
