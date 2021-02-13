@@ -5,8 +5,7 @@ class mass(zeenode.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-
-
+        
     @zeenode.command()
     async def massreact(self, ctx, emote):
         await ctx.message.delete()
