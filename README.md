@@ -14,6 +14,29 @@
 
 # Commands
 
+
+
+
+
+
+## Main
+
+$**purge** *(number of messages)* - Deletes messages.                                                                    
+
+$**hypesquad** *(badge)* - Changes your hypesquad badge.                                                                  
+
+$**embed** *(message)* - Sends embed message.                                                                             
+
+$**ascii** *(message)* - Sends message as ascii art.                                                                      
+
+ 
+
+
+
+
+
+
+
 ## Fun
 
 $**av** - Sends your avatar in the chat.                                                                          
@@ -32,23 +55,16 @@ $**nitro** - Sends a nitro.
 
 $**meme** - Sends a meme.                                                                                             
 
-### Main
+                                                       
 
-$**purge** *(number of messages)* - Deletes messages.                                                                    
 
-$**hypesquad** *(badge)* - Changes your hypesquad badge.                                                                  
 
-$**embed** *(message)* - Sends embed message.                                                                             
 
-$**ascii** *(message)* - Sends message as ascii art.                                                                      
 
-### Text Encoding
 
-$**encode_base64** *(message)* - Encodes text with Base64.                                                                  
 
-$**encode_md5** *(message)* - Encodes text with MD5 hash.                                                           
 
-### Activity
+## Activity
 
 $**watching** *(text)* - Shows watching status. 
 
@@ -59,6 +75,27 @@ $**playing** *(text)* - Shows playing status.
 $**streaming** *(text)* - Shows streaming status.
 
 $**stopactivity** - Stops activity.
+
+
+
+
+
+
+
+
+
+## Text Encoding
+
+$**encode_base64** *(message)* - Encodes text with Base64.                                                                  
+
+$**encode_md5** *(message)* - Encodes text with MD5 hash.   
+
+
+
+
+
+
+
 
 ## How to install and use Zeenode?
 - Windows
