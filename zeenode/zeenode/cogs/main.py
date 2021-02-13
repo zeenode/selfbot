@@ -2,7 +2,7 @@ import discord, requests, pyfiglet, datetime
 from discord.ext import commands as zeenode
 from zeenode.load import token
 
-Output = "Zeenode || "
+Output = "[ERROR] - "
 
 
 class Main(zeenode.Cog):
@@ -37,9 +37,9 @@ class Main(zeenode.Cog):
 
         try:
             requests.post('https://discordapp.com/api/v6/hypesquad/online', headers=headers, json=payload)
-            print(f"{Output}Succesfully set your HypeSquad house to {house}!")
+            print(f"{Fore.GREEN} Succesfully set your HypeSquad house to {house}!")
         except:
-            print(f"{Output}Failed to set your HypeSquad house to {house}.") 
+            print(f"{Fore.RED}{Output} {Fore.YELLOW}Failed to set your HypeSquad house to {house}.") 
 
 
     @zeenode.command()
