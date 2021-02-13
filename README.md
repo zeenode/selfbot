@@ -14,7 +14,7 @@
 
 ## Commands
 
-- Fun
+### Fun
 
 $**av** - Sends your avatar in the chat.                                                                          
 
@@ -32,7 +32,7 @@ $**nitro** - Sends a nitro.
 
 $**meme** - Sends a meme.                                                                                             
 
-- Main
+### Main
 
 $**purge** *(number of messages)* - Deletes messages.                                                                    
 
@@ -42,21 +42,21 @@ $**embed** *(message)* - Sends embed message.
 
 $**ascii** *(message)* - Sends message as ascii art.                                                                      
 
-- Text Encoding
+### Text Encoding
 
 $**encode_base64** *(message)* - Encodes text with Base64.                                                                  
 
 $**encode_md5** *(message)* - Encodes text with MD5 hash.                                                           
 
-- Activity
+### Activity
 
-$**watching** (text) - Shows watching status. 
+$**watching** *(text)* - Shows watching status. 
 
-$**listening** (text) - Shows listening status.                                                                              
+$**listening** *(text)* - Shows listening status.                                                                              
 
-$**playing** (text) - Shows playing status. 
+$**playing** *(text)* - Shows playing status. 
 
-$**streaming** (text) - Shows streaming status.
+$**streaming** *(text)* - Shows streaming status.
 
 $**stopactivity** - Stops activity.
 
