@@ -16,45 +16,45 @@
 
 - Fun
 
-$*av* - Sends your avatar in the chat.                                                                                 ( Works in servers + DMs )
+$*av* - Sends your avatar in the chat.                                                                          
 
-$*dick* @user - Shows user dick size.                                                                                  ( Works in servers + DMs )
+$*dick* @user - Shows user dick size.                                                                                
 
-$*guildicon* - Shows server(guild) icon.                                                                                    ( Servers only )
+$*guildicon* - Shows server(guild) icon.                                                                             
 
-$*hug* @user - Sends a hug to user.                                                                                    ( Works in servers + DMs )
+$*hug* @user - Sends a hug to user.
 
-$*kiss* @user - Sends a kiss to user.                                                                                  ( Works in servers + DMs )
+$*kiss* @user - Sends a kiss to user.                                                                            
 
-$*slap* @user - Sends a slap to user.                                                                                  ( Works in servers + DMs )
+$*slap* @user - Sends a slap to user.                                                                                 
 
-$*nitro* - Sends a nitro.                                                                                              ( Works in servers + DMs ) 
+$*nitro* - Sends a nitro.                                                                                           
 
-$*meme* - Sends a meme.                                                                                                ( Works in servers + DMs )
+$*meme* - Sends a meme.                                                                                             
 
 - Main
 
-$*purge* (number of messages) - Deletes messages.                                                                      ( Works in servers + DMs )
+$*purge* (number of messages) - Deletes messages.                                                                    
 
-$*hypesquad* (badge) - Changes your hypesquad badge.                                                                   ( Works in servers + DMs )
+$*hypesquad* (badge) - Changes your hypesquad badge.                                                                  
 
-$*embed* (message) - Sends embed message.                                                                              ( Works in servers + DMs )
+$*embed* (message) - Sends embed message.                                                                             
 
-$*ascii* (message) - Sends message as ascii art.                                                                       ( Works in servers + DMs )
+$*ascii* (message) - Sends message as ascii art.                                                                      
 
 - Text Encoding
 
-$*encode_base64* (message) - Encodes text with Base64.                                                                  ( Works in servers + DMs )
+$*encode_base64* (message) - Encodes text with Base64.                                                                  
 
-$*encode_md5* (message) - Encodes text with MD5 hash.                                                                   ( Works in servers + DMs )
+$*encode_md5* (message) - Encodes text with MD5 hash.                                                           
 
 - Activity
 
-$*watching* (text) - Shows watching status.
+$*watching* (text) - Shows watching status. 
 
-$*listening* (text) - Shows listening status.
+$*listening* (text) - Shows listening status.                                                                              
 
-$*playing* (text) - Shows playing status.
+$*playing* (text) - Shows playing status. 
 
 $*streaming* (text) - Shows streaming status.
 
