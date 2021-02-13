@@ -60,9 +60,9 @@ $**meme** - Sends a meme.
                                                        
 
 
+## Mass
 
-
-
+$**massreact** :(emoji): - Reacts to last 20 messages with emojis.
 
 
 
