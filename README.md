@@ -97,7 +97,7 @@ $**encode_md5** *(message)* - Encodes text with MD5 hash.
 
 
 
-## How to install and use Zeenode?
+#### How to install and use Zeenode?
 - Windows
     1. step
     2. by
@@ -106,12 +106,10 @@ $**encode_md5** *(message)* - Encodes text with MD5 hash.
     1. step
     2. by
     3. step
+    
+##    soon
 
-<> (## To-Do)
-- [x] Completed
-- [x] Completed
-- [ ] Incomplete
-- [ ] Incomplete
+
 
 # Notice:
 
