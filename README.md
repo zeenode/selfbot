@@ -13,15 +13,29 @@
 
 
 ## Commands
-- Fun
-    - Commands
-    - Will
-- Misc
-    - Be
-    - Listed
-- Main
-    - Here
 
+- Main
+* 
+
+- Fun
+
+- Text Encoding
+
+$*encode_base64* (message) - Encodes text with Base64.
+
+$*encode_md5* (message) - Encodes text with MD5 hash.
+
+- Activity
+
+$*watching* (text) - Shows watching status.
+
+$*listening* (text) - Shows listening status.
+
+$*playing* (text) - Shows playing status.
+
+$*streaming* (text) - Shows streaming status.
+
+$*stopactivity* - Stops activity.
 
 ## How to install and use Zeenode?
 - Windows
@@ -61,5 +75,3 @@ won't work if you actually have already an activity!
 ## Disclaimer:
 
 - For educational purposes only, (Github Organisation) Zeenode is not resposible for whatever you do with this.
-
-
