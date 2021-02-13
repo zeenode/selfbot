@@ -18,6 +18,7 @@ class Activity(zeenode.Cog):
         )
         await self.bot.change_presence(activity=stream)    
 
+        
     @zeenode.command()
     async def playing(self, ctx, *, message):
         await ctx.message.delete()
@@ -25,6 +26,7 @@ class Activity(zeenode.Cog):
             name=message
         )
         await self.bot.change_presence(activity=game)
+    
     
     @zeenode.command()
     async def listening(self, ctx, *, message):
@@ -34,10 +36,7 @@ class Activity(zeenode.Cog):
                 type=discord.ActivityType.listening, 
                 name=message, 
             ))
-            
-            
-            
-            
+           
             
     @zeenode.command()
     async def watching(self, ctx, *, message):
