@@ -15,9 +15,28 @@
 ## Commands
 
 - Main
-* 
+
+$*av* - Sends your avatar in the chat. ( Works in servers + DMs )
+
+$*dick* @user - Shows user dick size. ( Works in servers + DMs )
+
+$*guildicon* - Shows server(guild) icon.
+
+$*hug* @user - Sends a hug to user. ( Works in servers + DMs )
+
+$*kiss* @user - Sends a kiss to user. ( Works in servers + DMs )
+
+$*slap* @user - Sends a slap to user. ( Works in servers + DMs )
 
 - Fun
+
+$
+
+$
+
+$
+
+$
 
 - Text Encoding
 
