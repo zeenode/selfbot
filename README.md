@@ -29,7 +29,11 @@ $**embed** *(message)* - Sends embed message.
 
 $**ascii** *(message)* - Sends message as ascii art.                                                                      
 
+$**serverinfo** - Sends server info.
  
+$**av** - Sends your avatar in the chat.            
+
+$**guildicon** - Shows server(guild) icon.                                                                             
 
 
 
@@ -39,11 +43,9 @@ $**ascii** *(message)* - Sends message as ascii art.
 
 ## Fun
 
-$**av** - Sends your avatar in the chat.                                                                          
 
 $**dick** *@user* - Shows user dick size.                                                                                
 
-$**guildicon** - Shows server(guild) icon.                                                                             
 
 $**hug** *@user* - Sends a hug to user.
 
