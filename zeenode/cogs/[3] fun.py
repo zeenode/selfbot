@@ -74,16 +74,6 @@ class Fun(zeenode.Cog):
     
     
     
-    @zeenode.command()
-    async def encode(self, ctx, string):
-        await ctx.message.delete()
-        decoded_stuff = base64.b64encode('{}'.format(string).encode('ascii'))
-        encoded_stuff = str(decoded_stuff)
-        encoded_stuff = encoded_stuff[2:len(encoded_stuff)-1]
-        await ctx.send(encoded_stuff)
-    
-    
-    
 
     @zeenode.command()
     async def meme(self, ctx):
