@@ -107,7 +107,7 @@ $**encode_md5** *(message)* - Encodes text with MD5 hash.
     2. by
     3. step
 
-## To-Do
+<> (## To-Do)
 - [x] Completed
 - [x] Completed
 - [ ] Incomplete
