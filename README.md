@@ -113,25 +113,25 @@ $**encode_md5** *(message)* - Encodes text with MD5 hash.
 - [ ] Incomplete
 - [ ] Incomplete
 
-## Notice:
+# Notice:
 
-Activity Status like:
+### Activity Status like:
 
-$watching owersite
+##### $watching owersite
 
-or
+##### or
 
-$listening owersite
+##### $listening owersite
 
-or
+##### or
 
-$playing owersite
+##### $playing owersite
 
-won't work if you actually have already an activity!
+#### won't work if you actually have already an activity!
 
-****ONLY**** $streaming will work.
+### ****ONLY**** $streaming will work.
 
 
-## Disclaimer:
+# Disclaimer:
 
 - For educational purposes only, (Github Organisation) Zeenode is not resposible for whatever you do with this.
