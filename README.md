@@ -18,15 +18,15 @@
 
 $**av** - Sends your avatar in the chat.                                                                          
 
-$**dick** @user - Shows user dick size.                                                                                
+$**dick** *@user* - Shows user dick size.                                                                                
 
 $**guildicon** - Shows server(guild) icon.                                                                             
 
-$**hug** @user - Sends a hug to user.
+$**hug** *@user* - Sends a hug to user.
 
-$**kiss** @user - Sends a kiss to user.                                                                            
+$**kiss** *@user* - Sends a kiss to user.                                                                            
 
-$**slap** @user - Sends a slap to user.                                                                                 
+$**slap** *@user* - Sends a slap to user.                                                                                 
 
 $**nitro** - Sends a nitro.                                                                                           
 
@@ -34,19 +34,19 @@ $**meme** - Sends a meme.
 
 - Main
 
-$**purge** (number of messages) - Deletes messages.                                                                    
+$**purge** *(number of messages)* - Deletes messages.                                                                    
 
-$**hypesquad** (badge) - Changes your hypesquad badge.                                                                  
+$**hypesquad** *(badge)* - Changes your hypesquad badge.                                                                  
 
-$**embed** (message) - Sends embed message.                                                                             
+$**embed** *(message)* - Sends embed message.                                                                             
 
-$**ascii** (message) - Sends message as ascii art.                                                                      
+$**ascii** *(message)* - Sends message as ascii art.                                                                      
 
 - Text Encoding
 
-$**encode_base64** (message) - Encodes text with Base64.                                                                  
+$**encode_base64** *(message)* - Encodes text with Base64.                                                                  
 
-$**encode_md5** (message) - Encodes text with MD5 hash.                                                           
+$**encode_md5** *(message)* - Encodes text with MD5 hash.                                                           
 
 - Activity
 
