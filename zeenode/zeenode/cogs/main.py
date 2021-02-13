@@ -9,19 +9,13 @@ class Main(zeenode.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-
-   
-
-
-
-
- 
-
+        
     @zeenode.command()
     async def ascii(self, ctx, args):
         await ctx.message.delete()
         text = pyfiglet.figlet_format(args)
         await ctx.send(f'```{text}```')
+        
         
     @zeenode.command()
     async def hypesquad(self, ctx, house):
@@ -53,6 +47,8 @@ class Main(zeenode.Cog):
             await ctx.message.delete()
             embed=discord.Embed(title=title, description=description)
             await ctx.send(embed=embed)
+            
+            
     @zeenode.command(aliases=['pfp', 'avatar'])
     async def av(self, ctx, *, user: discord.User = None):
         await ctx.message.delete()
@@ -82,6 +78,7 @@ class Main(zeenode.Cog):
         embed.set_thumbnail(url=f"{ctx.guild.icon_url}")
         await ctx.send(embed=embed)
 
+        
     @zeenode.command()
     async def guildicon(self, ctx):
         await ctx.message.delete()
