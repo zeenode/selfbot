@@ -12,7 +12,7 @@
 
 
 
-#### How to install and use Zeenode?
+## How to install and use Zeenode?
 - Windows
     1. Download python, preferably 3.70. You can do that by heading to this link, https://www.python.org/downloads/release/python-370/. 
     2. Git clone the repository. You can do this by typing in your command prompt "git clone https://github.com/zeenode/selfbot" (You will need git which you can download from https://git-scm.com/download/win)
@@ -37,14 +37,14 @@
 
 
 
-# Commands
+## Commands
 
 
 
 
 
 
-## Main
+#### Main
 
 $**purge** *(number of messages)* - Deletes messages.                                                                    
 
@@ -66,7 +66,7 @@ $**guildicon** - Shows server(guild) icon.
 
 
 
-## Fun
+#### Fun
 
 
 $**dick** *@user* - Shows user dick size.                                                                                
@@ -85,13 +85,13 @@ $**meme** - Sends a meme.
                                                        
 
 
-## Mass
+#### Mass
 
 $**massreact** *:(emoji):* - Reacts to last 20 messages with emojis.
 
 
 
-## Activity
+#### Activity
 
 $**watching** *(text)* - Shows watching status. 
 
@@ -104,7 +104,7 @@ $**streaming** *(text)* - Shows streaming status.
 $**stopactivity** - Stops activity.
 
 
-# Currency
+#### Currency
 *Work in progress.*
 
 
@@ -112,7 +112,7 @@ $**stopactivity** - Stops activity.
 
 
 
-## Text Encoding
+#### Text Encoding
 
 $**encode_base64** *(message)* - Encodes text with Base64.                                                                  
 
@@ -129,7 +129,7 @@ $**encode_md5** *(message)* - Encodes text with MD5 hash.
 
 
 
-# Notice:
+## Notice:
 
 ### Activity Status like:
 
@@ -148,6 +148,6 @@ $**encode_md5** *(message)* - Encodes text with MD5 hash.
 ### ****ONLY**** $streaming will work.
 
 
-# Disclaimer:
+## Disclaimer:
 
-- For educational purposes only, (Github Organisation) Zeenode is not resposible for whatever you do with this.
+#### For educational purposes only, (Github Organisation) Zeenode is not resposible for whatever you do with this.
