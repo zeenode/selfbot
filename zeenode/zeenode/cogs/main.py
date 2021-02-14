@@ -86,8 +86,15 @@ class Main(zeenode.Cog):
         embed.set_author(name=ctx.guild.name, icon_url=ctx.guild.icon_url)   
         embed.set_image(url=ctx.guild.icon_url)
         await ctx.send(embed=embed)
-    
-
+        
+        
+    @zeenode.command()
+    async def spam(self, ctx, amount:int=None, *, message: str=None):
+        await ctx.message.delete()
+        for each in range (0, amount):
+            await ctx.send(f"{message}")
+            
+            
     @zeenode.command()
     async def purge(self, ctx, amount: int):
         await ctx.message.delete()
