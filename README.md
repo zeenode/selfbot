@@ -15,7 +15,7 @@
 #### How to install and use Zeenode?
 - Windows
     1. Download python, preferably 3.70. You can do that by heading to this link, https://www.python.org/downloads/release/python-370/. 
-    2. Git clone the repository. You can do this by typing in your command prompt "git clone https://github.com/zeenode/selfbot" (You will need git which you can download from https://git-scm.com/download/win. Make sure to install the Windows 64-bit Setup.)
+    2. Git clone the repository. You can do this by typing in your command prompt "git clone https://github.com/zeenode/selfbot" (You will need git which you can download from https://git-scm.com/download/win)
     3. Run the start.bat file and put in your token!
 - Linux/GNU
     1. Download python, preferably 3.70. You can do that by heading to this link, https://www.python.org/downloads/release/python-370/ and installing the gunzipped source tarball. (Note you will need to build python from source. Alternatively you can download it from the terminal by using your distro's package manager, although it will be the newest version, not 3.7.0)
