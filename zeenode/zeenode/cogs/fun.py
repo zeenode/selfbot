@@ -57,37 +57,7 @@ class Fun(zeenode.Cog):
         embed.set_author(name="Here is the your meme.", icon_url="https://freepngimg.com/thumb/internet_meme/3-2-troll-face-meme-png-thumb.png") 
         embed.set_image(url=str(r["image"]))
         await ctx.send(embed=embed)
-        
-        
-   @zeenode.command()
-   async def cat(self, ctx):
-    await ctx.message.delete()
-    r = requests.get("https://some-random-api.ml/img/cat").json()
-    embed = discord.Embed(color=0x0000)
-    embed.set_author(name="Here is the your cat.", icon_url="https://cdn.discordapp.com/attachments/796868392095186976/810566027637162034/zeenode_cat.png") 
-    embed.set_image(url=str(r["link"]))
-    await ctx.send(embed=embed)
-
-    
-  @zeenode.command()
-  async def dog(self, ctx):
-    await ctx.message.delete()
-    r = requests.get("https://some-random-api.ml/img/dog").json()
-    embed = discord.Embed(color=0x0000)
-    embed.set_author(name="Here Is the your dog." , icon_url="https://cdn.discordapp.com/attachments/796868392095186976/810566380545114172/zeenode_dog.png") 
-    embed.set_image(url=str(r["link"]))
-    await ctx.send(embed=embed)
-    
-    
-@zeenode.command()
-async def panda(self, ctx):
-    await ctx.message.delete()
-    r = requests.get("https://some-random-api.ml/img/panda").json()
-    embed = discord.Embed(color=0x0000)
-    embed.set_author(name="Here is the your panda.", icon_url="https://cdn.freebiesupply.com/logos/large/2x/panda-7-logo-png-transparent.png") 
-    embed.set_image(url=str(r["link"]))
-    await ctx.send(embed=embed)
-    
+       
     
     @zeenode.command()
     async def nitro(self, ctx):
