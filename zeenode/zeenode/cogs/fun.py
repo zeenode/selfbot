@@ -61,7 +61,7 @@ class Fun(zeenode.Cog):
         embed.set_image(url=str(r["link"]))
         await ctx.send(embed=embed)    
     
-
+    
     @zeenode.command()
     async def meme(self, ctx):
         await ctx.message.delete()
@@ -71,6 +71,7 @@ class Fun(zeenode.Cog):
         embed.set_image(url=str(r["image"]))
         await ctx.send(embed=embed)
 
+        
     @zeenode.command()
     async def cat(self, ctx):
         await ctx.message.delete()
@@ -79,6 +80,7 @@ class Fun(zeenode.Cog):
         embed.set_author(name="Here is the your cat.", icon_url="https://cdn.discordapp.com/attachments/796868392095186976/810566027637162034/zeenode_cat.png") 
         embed.set_image(url=str(r["link"]))
         await ctx.send(embed=embed)   
+    
     
     @zeenode.command()
     async def dog(self, ctx):
@@ -89,6 +91,7 @@ class Fun(zeenode.Cog):
         embed.set_image(url=str(r["link"]))
         await ctx.send(embed=embed)    
 
+        
     @zeenode.command()
     async def nitro(self, ctx):
             await ctx.message.delete()
