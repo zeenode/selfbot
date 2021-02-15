@@ -105,6 +105,9 @@ $**stopactivity** - Stops activity.
 *Work in progress.*
 
 
+#### Emoticons
+
+$**listemoticons** - Lists all the cool emoticons you can send because there are too many to list on this README file.
 
 
 
