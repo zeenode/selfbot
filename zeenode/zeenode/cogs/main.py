@@ -50,6 +50,16 @@ class Main(zeenode.Cog):
             await ctx.send(embed=embed)
             
             
+    @zeenode.command(aliases=["suggestion"])
+    async def suggest(self, ctx, *, suggestion):
+            await ctx.message.delete()
+            embed = discord.Embed(title="Suggestion:", color=0x0000, description=suggestion)
+            embed.set_thumbnail(url="")
+            msg = await ctx.send(embed=embed)
+            await msg.add_reaction('\U0001F44D')
+            await msg.add_reaction('\U0001F44E')
+            
+            
     @zeenode.command(aliases=['pfp', 'avatar'])
     async def av(self, ctx, *, user: discord.User = None):
         await ctx.message.delete()
