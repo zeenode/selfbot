@@ -44,10 +44,10 @@ class Main(zeenode.Cog):
 
 
     @zeenode.command()
-    async def embed(self, ctx, title, *, description):
-            await ctx.message.delete()
-            embed=discord.Embed(title=title, description=description)
-            await ctx.send(embed=embed)
+    async def embed(self, ctx, *, description):
+        await ctx.message.delete()
+        embed = discord.Embed(description=description, color=0x0000)
+        await ctx.send(embed=embed)
             
             
     @zeenode.command(aliases=["suggestion"])
