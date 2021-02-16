@@ -1,4 +1,4 @@
-import discord, requests, pyfiglet, datetime
+import discord, requests, pyfiglet, datetime, aiohttp
 from discord.ext import commands as zeenode
 from zeenode.load import token
 
