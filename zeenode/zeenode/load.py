@@ -93,6 +93,8 @@ class load:
         bot.load_extension("zeenode.cogs.activity")
         bot.load_extension("zeenode.cogs.text_encoding")
         bot.load_extension("zeenode.cogs.mass")
+        bot.load_extension("zeenode.cogs.currency")
+        bot.load_extension("zeenode.cogs.emoticons")
 
         # Loading events
         bot.load_extension("zeenode.events.on_message")
