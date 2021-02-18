@@ -7,6 +7,12 @@ class emoticons(zeenode.Cog):
 
 
     @zeenode.command()
+    async def listemoti(self, ctx):
+        await ctx.message.delete()
+        text = "fuckyou, lenny, what, bear, worried, ak47, awp, lmg, sword, love, goodnight, smile"
+        await ctx.send(text)
+
+    @zeenode.command()
     async def fuckyou(self, ctx):
         await ctx.message.delete()
         middle = '╭∩╮(･◡･)╭∩╮'
