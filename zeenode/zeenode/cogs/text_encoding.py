@@ -44,16 +44,7 @@ class encode(zeenode.Cog):
         msg = hashlib.sha3_224(message.encode())
         crnja =  msg.hexdigest()
         await ctx.send(crnja)
-    
-    @zeenode.command()
-    async def encode_shake128(self, ctx, message):
-        await ctx.message.delete()
-        msg = hashlib.shake_128(message.encode())
-        crnja =  msg.hexdigest()
-        await ctx.send(crnja)
-        
-        
-        
+
     @zeenode.command()
     async def encode_sha512(self, ctx, message):
         await ctx.message.delete()
@@ -66,12 +57,6 @@ class encode(zeenode.Cog):
     
     
     
-    @zeenode.command()
-    async def encode_shake256(self, ctx, message):
-        await ctx.message.delete()
-        msg = hashlib.shake_256(message.encode())
-        crnja =  msg.hexdigest()
-        await ctx.send(crnja)
-
+   
 def setup(bot):
     bot.add_cog(encode(bot))
