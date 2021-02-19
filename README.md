@@ -40,6 +40,37 @@
 
 
 
+#### Activity
+$**listening** *(text)* - Shows listening status.                                                                              
+$**playing** *(text)* - Shows playing status. 
+$**stopactivity** - Stops activity.
+$**streaming** *(text)* - Shows streaming status.
+
+$**watching** *(text)* - Shows watching status. 
+
+
+
+
+
+#### Fun
+
+
+
+$**cat** - Sends a cute cat image.
+
+$**dog** - Sends a cute dog image.
+
+$**dick** *@user* - Shows user dick size.                                                                                
+
+$**hug** *@user* - Sends a hug to user.
+
+$**kiss** *@user* - Sends a kiss to user.                                                                            
+
+$**meme** - Sends a meme.                                                                                             
+$**nitro** - Sends a nitro.                                                                                           
+
+$**slap** *@user* - Sends a slap to user.                                                                                 
+                                                       
 
 #### Main
 
@@ -59,27 +90,13 @@ $**guildicon** - Shows server(guild) icon.
 
 
 
+#### Currency
+*Work in progress.*
 
 
 
 
-#### Fun
 
-
-$**dick** *@user* - Shows user dick size.                                                                                
-
-
-$**hug** *@user* - Sends a hug to user.
-
-$**kiss** *@user* - Sends a kiss to user.                                                                            
-
-$**slap** *@user* - Sends a slap to user.                                                                                 
-
-$**nitro** - Sends a nitro.                                                                                           
-
-$**meme** - Sends a meme.                                                                                             
-
-                                                       
 
 
 #### Mass
@@ -88,21 +105,6 @@ $**massreact** *:(emoji):* - Reacts to last 20 messages with emojis.
 $**spam** *number* *message* - Spams message number of times.
 
 
-#### Activity
-
-$**watching** *(text)* - Shows watching status. 
-
-$**listening** *(text)* - Shows listening status.                                                                              
-
-$**playing** *(text)* - Shows playing status. 
-
-$**streaming** *(text)* - Shows streaming status.
-
-$**stopactivity** - Stops activity.
-
-
-#### Currency
-*Work in progress.*
 
 
 #### Emoticons
