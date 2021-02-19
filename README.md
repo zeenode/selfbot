@@ -40,7 +40,7 @@
 
 
 
-#### Activity
+### Activity
 $**listening** *(text)* - Shows listening status.                                                                              
 $**playing** *(text)* - Shows playing status. 
 $**stopactivity** - Stops activity.
@@ -52,7 +52,7 @@ $**watching** *(text)* - Shows watching status.
 
 
 
-#### Fun
+### Fun
 
 
 
@@ -72,7 +72,7 @@ $**nitro** - Sends a nitro.
 $**slap** *@user* - Sends a slap to user.                                                                                 
                                                        
 
-#### Main
+### Main
 
 $**ascii** *(message)* - Sends message as ascii art.                                                                      
 $**av** - Sends your avatar in the chat.            
@@ -89,7 +89,7 @@ $**whois** *Tag(User)* - Sends info about user.
 
 
 
-#### Currency
+### Currency
 $**btc** - Shows Bitcoin Price.
 $**doge** - Shows Doge price.
 $**eth** - Shows Etherium price.
@@ -105,14 +105,14 @@ $**xrp** - Shows Ripple Price.
 
 
 
-#### Emoticons
+### Emoticons
 
 $**listemoticons** - Lists all the cool emoticons you can send because there are too many to list on this README file.
 
 
 
 
-#### Text Encoding
+### Text Encoding
 
 $**encode_base64** *(message)* - Encodes text with Base64.                                                                  
 
@@ -122,13 +122,13 @@ $**encode_md5** *(message)* - Encodes text with MD5 hash.
 
 
 
-#### Mass
+### Mass
 
 $**massreact** *:(emoji):* - Reacts to last 20 messages with emojis.
 $**spam** *number* *message* - Spams message number of times.
 
 
-### End of commands.
+## End of commands.
 
 
 
