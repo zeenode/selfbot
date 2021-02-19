@@ -7,7 +7,7 @@ class emoticons(zeenode.Cog):
 
 
     @zeenode.command()
-    async def listemoti(self, ctx):
+    async def listemoticons(self, ctx):
         await ctx.message.delete()
         text = "fuckyou, lenny, what, bear, worried, ak47, awp, lmg, sword, love, goodnight, smile"
         await ctx.send(text)
