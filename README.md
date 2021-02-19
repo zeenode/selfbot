@@ -2,7 +2,7 @@
 
 
 ## T.O.S
-###### This repository/project is under MIT licence, if you are using it please leave watermark to the owner. (github.com/zeenode)
+###### This repository/project is under MIT licence, if you are using it please leave watermark to the organisation. (github.com/zeenode)
 
 
 ### About the project
