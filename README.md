@@ -90,18 +90,17 @@ $**whois** *Tag(User)* - Sends info about user.
 
 
 #### Currency
-*Work in progress.*
+$**btc** - Shows Bitcoin Price.
+$**doge** - Shows Doge price.
+$**eth** - Shows Etherium price.
+$**XMR** - Shows Monero price.
+$**xrp** - Shows Ripple Price.
+
+###### Notice: More values will be added soon!
 
 
 
 
-
-
-
-#### Mass
-
-$**massreact** *:(emoji):* - Reacts to last 20 messages with emojis.
-$**spam** *number* *message* - Spams message number of times.
 
 
 
@@ -123,9 +122,13 @@ $**encode_md5** *(message)* - Encodes text with MD5 hash.
 
 
 
+#### Mass
+
+$**massreact** *:(emoji):* - Reacts to last 20 messages with emojis.
+$**spam** *number* *message* - Spams message number of times.
 
 
-
+### End of commands.
 
 
 
