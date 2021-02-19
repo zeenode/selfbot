@@ -188,6 +188,7 @@ $**hentai** *(User Tag)* - Sends hentai. ( Anime porn )
 
 ### ****ONLY**** $streaming will work.
 
+## For other commands you can either read from here, or type (prefix($))help in any discord channel to see list of commands.
 
 ## Disclaimer:
 
