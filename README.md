@@ -107,9 +107,19 @@ $**xrp** - Shows Ripple Price.
 
 ### Emoticons
 
-$**listemoticons** - Lists all the cool emoticons you can send because there are too many to list on this README file.
-
-
+#### $**listemoticons** - Lists all the cool emoticons you can send because there are too many to list on this README file.
+$**ak47** - Sends AK47 emoticon.
+$**awp** - Sends awp emoticon.
+$**bear** - Sends bear emoticon.
+$**fuckyou** - Sends fuckyou emoticon.
+$**goodnight** - Sends goodnight emoticon.
+$**lenny** - Sends lenny emoticon.
+$**lmg** - Sends lmg emoticon.
+$**love** - Sends love emoticon.
+$**smile** - Sends smile emoticon.
+$**sword** - Sends sword emoticon.
+$**what** - Sends what emoticon.
+$**worries** - Sends worried emoticon.
 
 
 ### Text Encoding
