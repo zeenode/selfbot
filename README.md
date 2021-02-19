@@ -163,7 +163,7 @@ $**blowjob** *(User Tag)* - Sends nsfw anime content.
 
 $**boobs** *(User Tag)* - Sends nsfw anime content.
 
-$**hentai** *(User Tag)* - Sends hentai content.
+$**hentai** *(User Tag)* - Sends hentai. ( Anime porn )
 
 ## End of commands.
 
