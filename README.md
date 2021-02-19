@@ -40,7 +40,8 @@
 
 
 
-### Activity
+### Activity:
+
 $**listening** *(text)* - Shows listening status.       
 
 $**playing** *(text)* - Shows playing status. 
@@ -55,7 +56,7 @@ $**watching** *(text)* - Shows watching status.
 
 
 
-### Fun
+### Fun:
 
 
 
@@ -76,7 +77,7 @@ $**nitro** - Sends a nitro.
 $**slap** *@user* - Sends a slap to user.                                                                                 
                                                        
 
-### Main
+### Main:
 
 $**ascii** *(message)* - Sends message as ascii art.    
 
@@ -100,7 +101,8 @@ $**whois** *Tag(User)* - Sends info about user.
 
 
 
-### Currency
+### Currency:
+
 $**btc** - Shows Bitcoin Price.
 
 $**doge** - Shows Doge price.
@@ -121,12 +123,12 @@ $**xrp** - Shows Ripple Price.
 
 
 
-### Emoticons
+### Emoticons:
 
 #### $**listemoticons** - Lists all the cool emoticons you can send because there are too many to list on this README file.
 
 
-### Text Encoding
+### Text Encoding:
 
 $**encode_base64** *(word/message)* - Encodes text with Base64.                                                                  
 
@@ -145,12 +147,23 @@ $**Encode_sha251** *(word/message)* - Encodes text with Sha512.
 
 
 
-### Mass
+### Mass:
 
 $**massreact** *:(emoji):* - Reacts to last 20 messages with emojis.
 
 $**spam** *number* *message* - Spams message number of times.
 
+
+### Nsfw:
+
+
+$**anal** *(User tag)* - Sends nsfw anime content.
+
+$**blowjob** *(User Tag)* - Sends nsfw anime content.
+
+$**boobs** *(User Tag)* - Sends nsfw anime content.
+
+$**hentai** *(User Tag)* - Sends hentai content.
 
 ## End of commands.
 
