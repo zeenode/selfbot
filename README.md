@@ -36,7 +36,7 @@
 
 ## Commands
 
-
+## You can see this by typing (prefix)help in any discord channel.
 
 
 
