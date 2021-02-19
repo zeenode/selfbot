@@ -96,6 +96,8 @@ $**serverinfo** - Shows server info.
 $**suggest** *Question* - Sends question with embed leaving thumbsup & thumbsdown sign.
 
 $**whois** *Tag(User)* - Sends info about user.
+
+$**geoip** *ip* - Looks up geoip data of an IP address provided.
                                                                         
 
 
@@ -107,7 +109,7 @@ $**btc** - Shows Bitcoin Price.
 
 $**doge** - Shows Doge price.
 
-$**eth** - Shows Etherium price.
+$**eth** - Shows Ethereum price.
 
 $**XMR** - Shows Monero price.
 
