@@ -41,9 +41,12 @@
 
 
 ### Activity
-$**listening** *(text)* - Shows listening status.                                                                              
+$**listening** *(text)* - Shows listening status.       
+
 $**playing** *(text)* - Shows playing status. 
+
 $**stopactivity** - Stops activity.
+
 $**streaming** *(text)* - Shows streaming status.
 
 $**watching** *(text)* - Shows watching status. 
@@ -66,7 +69,8 @@ $**hug** *@user* - Sends a hug to user.
 
 $**kiss** *@user* - Sends a kiss to user.                                                                            
 
-$**meme** - Sends a meme.                                                                                             
+$**meme** - Sends a meme.         
+
 $**nitro** - Sends a nitro.                                                                                           
 
 $**slap** *@user* - Sends a slap to user.                                                                                 
@@ -74,15 +78,22 @@ $**slap** *@user* - Sends a slap to user.
 
 ### Main
 
-$**ascii** *(message)* - Sends message as ascii art.                                                                      
+$**ascii** *(message)* - Sends message as ascii art.    
+
 $**av** - Sends your avatar in the chat.            
-$**embed** *(message)* - Sends embed message.                                                                             
+
+$**embed** *(message)* - Sends embed message.   
+
 $**guildicon** - Shows server(guild) icon.     
+
 $**hypesquad** *(badge)* - Changes your hypesquad badge.                                                                  
 
-$**purge** *(number of messages)* - Deletes messages.                                                                    
+$**purge** *(number of messages)* - Deletes messages.      
+
 $**serverinfo** - Shows server info.
+
 $**suggest** *Question* - Sends question with embed leaving thumbsup & thumbsdown sign.
+
 $**whois** *Tag(User)* - Sends info about user.
                                                                         
 
@@ -91,10 +102,15 @@ $**whois** *Tag(User)* - Sends info about user.
 
 ### Currency
 $**btc** - Shows Bitcoin Price.
+
 $**doge** - Shows Doge price.
+
 $**eth** - Shows Etherium price.
+
 $**XMR** - Shows Monero price.
+
 $**xrp** - Shows Ripple Price.
+
 
 ###### Notice: More values will be added soon!
 
@@ -108,33 +124,31 @@ $**xrp** - Shows Ripple Price.
 ### Emoticons
 
 #### $**listemoticons** - Lists all the cool emoticons you can send because there are too many to list on this README file.
-$**ak47** - Sends AK47 emoticon.
-$**awp** - Sends awp emoticon.
-$**bear** - Sends bear emoticon.
-$**fuckyou** - Sends fuckyou emoticon.
-$**goodnight** - Sends goodnight emoticon.
-$**lenny** - Sends lenny emoticon.
-$**lmg** - Sends lmg emoticon.
-$**love** - Sends love emoticon.
-$**smile** - Sends smile emoticon.
-$**sword** - Sends sword emoticon.
-$**what** - Sends what emoticon.
-$**worries** - Sends worried emoticon.
 
 
 ### Text Encoding
 
-$**encode_base64** *(message)* - Encodes text with Base64.                                                                  
+$**encode_base64** *(word/message)* - Encodes text with Base64.                                                                  
 
-$**encode_md5** *(message)* - Encodes text with MD5 hash.   
+$**encode_leet** *(word/message)* - Encodes text with leet speak (if you don't know what is leet it is basicly hacker language).
+
+$**encode_md5** *(word/message)* - Encodes text with MD5 hash.   
 
 
+$**encode_sha1** *(word/message)* - Encodes text with Sha1.
+
+$**encode_sha224** *(word/message)* - Encodes text wish SHA224.
+
+$**encode_sha384** *(word/message)* - Encodes text with Sha384.
+
+$**Encode_sha251** *(word/message)* - Encodes text with Sha512.
 
 
 
 ### Mass
 
 $**massreact** *:(emoji):* - Reacts to last 20 messages with emojis.
+
 $**spam** *number* *message* - Spams message number of times.
 
 
