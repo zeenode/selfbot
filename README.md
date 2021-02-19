@@ -1,5 +1,10 @@
 # Zeenode Discord Selfbot
 
+
+## T.O.S
+###### This repository/project is under MIT licence, if you are using it please leave watermark to the owner. (github.com/owersite)
+
+
 ### About the project
 
 - This project is mainly made for people who want to understand discord.py lib for python so that they can develop their skills in using it. Discord prohibits Selfbots so if you want to use this you will use it at your own risk.
