@@ -74,19 +74,18 @@ $**slap** *@user* - Sends a slap to user.
 
 #### Main
 
-$**purge** *(number of messages)* - Deletes messages.                                                                    
-
+$**ascii** *(message)* - Sends message as ascii art.                                                                      
+$**av** - Sends your avatar in the chat.            
+$**embed** *(message)* - Sends embed message.                                                                             
+$**guildicon** - Shows server(guild) icon.     
 $**hypesquad** *(badge)* - Changes your hypesquad badge.                                                                  
 
-$**embed** *(message)* - Sends embed message.                                                                             
+$**purge** *(number of messages)* - Deletes messages.                                                                    
+$**serverinfo** - Shows server info.
+$**suggest** *Question* - Sends question with embed leaving thumbsup & thumbsdown sign.
+$**whois** *Tag(User)* - Sends info about user.
+                                                                        
 
-$**ascii** *(message)* - Sends message as ascii art.                                                                      
-
-$**serverinfo** - Sends server info.
- 
-$**av** - Sends your avatar in the chat.            
-
-$**guildicon** - Shows server(guild) icon.                                                                             
 
 
 
