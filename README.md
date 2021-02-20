@@ -37,7 +37,7 @@
 
 
 
-
+<!---
 
 ## Commands
 
@@ -175,7 +175,7 @@ $**hentai** *(User Tag)* - Sends hentai. ( Anime porn )
 ## End of commands.
 
 
-
+-->
 
 ## Notice:
 
