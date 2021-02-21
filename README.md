@@ -1,8 +1,8 @@
 # Zeenode Discord Selfbot
 
 
-## T.O.S
-###### This repository/project is under MIT licence, if you are using it please leave watermark to the organisation. (github.com/zeenode)
+# T.O.S
+#### This repository/project is under MIT licence, if you are using it please leave watermark to the organisation. (github.com/zeenode)
 
 
 ### About the project
@@ -30,7 +30,8 @@
 
 
 
-
+## Commands / How to use?
+#### Type (prefix)help (ex. $help) to see list of commands!
 
 
 
@@ -195,8 +196,7 @@ $**hentai** *(User Tag)* - Sends hentai. ( Anime porn )
 
 ### ****ONLY**** $streaming will work.
 
-## For other commands you can either read from here, or type (prefix($))help in any discord channel to see list of commands.
 
-## Disclaimer:
+# Disclaimer:
 
 #### For educational purposes only, (Github Organisation) Zeenode is not resposible for whatever you do with this.
