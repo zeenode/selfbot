@@ -67,19 +67,6 @@ class currency(zeenode.Cog):
         embedic.set_author(name='Ethereum', icon_url='https://cdn.freebiesupply.com/logos/large/2x/ethereum-1-logo-png-transparent.png')
         await ctx.send(embed=embedic)
 
-    
-
-    @zeenode.command()
-    async def eth(self, ctx):
-        await ctx.message.delete()
-        r = requests.get("https://min-api.cryptocompare.com/data/price?fsym=DOGE&tsyms=USD,EUR")
-        kekistan = r.json()
-        eur = kekistan['EUR']
-        usd = kekistan['USD']
-        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD: `{str(usd)}$`')
-        embedic.set_author(name='Ethereum', icon_url='https://cdn.freebiesupply.com/logos/large/2x/ethereum-1-logo-png-transparent.png')
-        await ctx.send(embed=embedic)
-
 
 def setup(bot):
     bot.add_cog(currency(bot))
