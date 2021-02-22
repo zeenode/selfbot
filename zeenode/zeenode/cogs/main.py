@@ -137,51 +137,6 @@ class Main(zeenode.Cog):
         msg = await ctx.send(embed=embed)
         await msg.add_reaction('\U0001F44D')
         await msg.add_reaction('\U0001F44E')
-
-
-    @zeenode.command()
-    async def geoip(self, ctx):
-        http = urllib3.PoolManager()
-        geoipenis = http.request('GET', 'http://ip-api.com/json/{msg}')
-        await ctx.message.delete()
-        emb = discord.Embed(
-            title="Please enter the IP",
-            description="||You can only make 45 HTTP requests per minute.||"
-        )
-        sent = await ctx.send(embed=emb)
-
-        try: 
-            msg = await self.bot.wait_for(
-                "message",
-                timeout=10,
-                check=lambda message: message.author == ctx.author
-                                      and message.channel == ctx.channel
-            )
-            if msg: 
-                await sent.delete()
-                await msg.delete()
-                r = requests.get('http://ip-api.com/json/{msg}')
-                j = r.json()
-                stat = j['status']
-                cntr = j['country']
-                cntrcode = j['countryCode']
-                rgn = j['region']
-                rgnName = j['regionName']
-                ct = j['city']
-                zipc = j['zip']
-                latti = j['lat']
-                longi = j['lon']
-                tmzne = j['timezone']
-                internetsp = j['isp']
-                orgg = j['org']
-                ass = ['as']
-                ip = query
-                emb = discord.Embed(description=f'status:`{str(stat)}`\ncountry:`{str(cntr)}`\nregion: `{str(rgn)}`\nregionName: `{str(rgnName)}`\ncity: `{str(ct)}`\nzip code: `{str(zipc)}`\nlatitude: `{str(latti)}`\nlongitude: `{str(longi)}`\ntimezone: `{str(tmzne)}`\nisp: `{str(internetsp)}`\nquery: `{str(ip)}`')
-                emb.set_author(name='Zeenode IP Lookup', icon_url="https://image.flaticon.com/icons/png/512/2563/2563810.png")
-                await ctx.send(embed=emb)
-        except asyncio.TimeoutError:
-            await sent.delete()
-            await ctx.send("You haven't supplied an IP address.", delete_after=10)
             
             
     @zeenode.command(aliases=['pfp', 'avatar'])
