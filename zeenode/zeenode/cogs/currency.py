@@ -13,7 +13,7 @@ class currency(zeenode.Cog):
         kekistan = r.json()
         eur = kekistan['EUR']
         usd = kekistan['USD']
-        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD:`{str(usd)}$`')
+        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD: `{str(usd)}$`')
         embedic.set_author(name='Bitcoin', icon_url='https://cdn.discordapp.com/attachments/809476865274282054/810558144127172669/bitcoin-225079_960_720.png')
         await ctx.send(embed=embedic)
 
@@ -26,7 +26,7 @@ class currency(zeenode.Cog):
         kekistan = r.json()
         eur = kekistan['EUR']
         usd = kekistan['USD']
-        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD:`{str(usd)}$`')
+        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD: `{str(usd)}$`')
         embedic.set_author(name='Monero', icon_url='https://cdn.freebiesupply.com/logos/large/2x/monero-logo-png-transparent.png')
         await ctx.send(embed=embedic)
 
@@ -40,7 +40,7 @@ class currency(zeenode.Cog):
         kekistan = r.json()
         eur = kekistan['EUR']
         usd = kekistan['USD']
-        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD:`{str(usd)}$`')
+        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD: `{str(usd)}$`')
         embedic.set_author(name='Ripple', icon_url='https://cdn.freebiesupply.com/logos/large/2x/ripple-2-logo-png-transparent.png')
         await ctx.send(embed=embedic)
 
@@ -52,7 +52,7 @@ class currency(zeenode.Cog):
         kekistan = r.json()
         eur = kekistan['EUR']
         usd = kekistan['USD']
-        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD:`{str(usd)}$`')
+        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD: `{str(usd)}$`')
         embedic.set_author(name='Dogecoin', icon_url='https://cdn.coindoo.com/2019/10/dogecoin-logo.png')
         await ctx.send(embed=embedic)
 
@@ -63,7 +63,7 @@ class currency(zeenode.Cog):
         kekistan = r.json()
         eur = kekistan['EUR']
         usd = kekistan['USD']
-        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD:`{str(usd)}$`')
+        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD: `{str(usd)}$`')
         embedic.set_author(name='Ethereum', icon_url='https://cdn.freebiesupply.com/logos/large/2x/ethereum-1-logo-png-transparent.png')
         await ctx.send(embed=embedic)
 
@@ -76,7 +76,7 @@ class currency(zeenode.Cog):
         kekistan = r.json()
         eur = kekistan['EUR']
         usd = kekistan['USD']
-        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD:`{str(usd)}$`')
+        embedic = discord.Embed(description=f'EUR: `{str(eur)}€`\nUSD: `{str(usd)}$`')
         embedic.set_author(name='Ethereum', icon_url='https://cdn.freebiesupply.com/logos/large/2x/ethereum-1-logo-png-transparent.png')
         await ctx.send(embed=embedic)
 
