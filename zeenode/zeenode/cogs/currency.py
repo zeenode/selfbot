@@ -59,7 +59,7 @@ class currency(zeenode.Cog):
     @zeenode.command()
     async def eth(self, ctx):
         await ctx.message.delete()
-        r = requests.get("https://min-api.cryptocompare.com/data/price?fsym=DOGE&tsyms=USD,EUR")
+        r = requests.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD,EUR")
         kekistan = r.json()
         eur = kekistan['EUR']
         usd = kekistan['USD']
