@@ -12,3 +12,4 @@ string
 random
 asyncio
 json
+re
