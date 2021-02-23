@@ -182,7 +182,7 @@ $**hentai** *(User Tag)* - Sends hentai. ( Anime porn )
 
 ### Activity Status like:
 - $watching, $listening or $playing won't work if you actually have already an activity! 
-### ****ONLY**** $streaming will work.
+- Only $streaming will work!
 
 
 # Disclaimer:
