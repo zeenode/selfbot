@@ -1,8 +1,0 @@
-discord.py
-colorama
-aiohttp
-requests
-pyfiglet
-io
-base64
-urllib3
