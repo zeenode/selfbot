@@ -6,3 +6,6 @@ pyfiglet
 io
 base64
 urllib3
+hashlib
+string
+random
