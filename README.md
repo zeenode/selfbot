@@ -181,19 +181,7 @@ $**hentai** *(User Tag)* - Sends hentai. ( Anime porn )
 ## Notice:
 
 ### Activity Status like:
-
-##### $watching owersite
-
-##### or
-
-##### $listening owersite
-
-##### or
-
-##### $playing owersite
-
-#### won't work if you actually have already an activity!
-
+- $watching, $listening or $playing won't work if you actually have already an activity! 
 ### ****ONLY**** $streaming will work.
 
 
