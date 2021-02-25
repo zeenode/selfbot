@@ -4,6 +4,8 @@
 # T.O.S
 #### This repository/project is under MIT licence, if you are using it please leave watermark to the organisation. (github.com/zeenode)
 
+## Selfbot Portfolio: 
+###### https://zeenode.github.io/selfbot-site/
 
 ### About the project
 
@@ -17,12 +19,12 @@
 
 
 
-## How to install and use Zeenode?
-- Windows
+## How to install and use Zeenode Discord Self-Bot?
+- Windows:
     1. Download python, preferably 3.7.0. You can do that by heading to this link, https://www.python.org/downloads/release/python-370/. 
     2. Git clone the repository. You can do this by typing in your command prompt "git clone https://github.com/zeenode/selfbot" (You will need git which you can download from https://git-scm.com/download/win)
-    3. Run the python file and input your token. You will need to do this everytime you start the selfbot. Alternatively you can put your token in the *config.py* file.
-- Linux/GNU
+    3. Run install.bat then launch.bat and input your token. You will need to do this everytime you start the selfbot. Alternatively you can put your token in the *config.py* file.
+- GNU/Linux:
     1. Download python, preferably 3.7.0. You can do that by heading to this link, https://www.python.org/downloads/release/python-370/ and installing the gunzipped source tarball. (Note you will need to build python from source. Alternatively you can download it from the terminal by using your distro's package manager, although it will be the newest version, not 3.7.0)
     2. Git clone the repository. You can do this by typing in your command prompt "git clone https://github.com/zeenode/selfbot" (You will need git for this which you can download from the terminal by using your distro's package manager.)
     3. Run the python file and input your token. You will need to do this everytime you start the selfbot. Alternatively you can put your token in the *config.py* file.
@@ -181,20 +183,8 @@ $**hentai** *(User Tag)* - Sends hentai. ( Anime porn )
 ## Notice:
 
 ### Activity Status like:
-
-##### $watching owersite
-
-##### or
-
-##### $listening owersite
-
-##### or
-
-##### $playing owersite
-
-#### won't work if you actually have already an activity!
-
-### ****ONLY**** $streaming will work.
+- $watching, $listening or $playing won't work if you actually have already an activity! 
+- Only $streaming will work!
 
 
 # Disclaimer:
