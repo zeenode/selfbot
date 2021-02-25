@@ -104,7 +104,7 @@ class Main(zeenode.Cog):
             embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
                             icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
             embed.set_image(url="https://cdn.discordapp.com/attachments/796868392095186976/812744896439910450/zeenode_banner.gif")
-            embed.description = f"`\uD83D\uDD25 - Main Commands`\n`> ascii <message>` - Sends message as ascii art. \n`> embed <message>` - Sends embed message.\n`> av <@user>` - Sends your avatar in the chat.\n`> guildicon` - Shows server (guild) icon.\n`> serverinfo` - Shows server info.\n`> whois <@user>` - Sends info about user.\n`> hypesquad <house>` - Allows you to change your hypesquad house/badge.\n`> purge <number of messages>` - Deletes messages.\n`> suggest <question>` - Sends question with embed leaving thumbsup & thumbsdown react.\n`> geoip <ip address>` - Looks up geoip data of an IP address provided."
+            embed.description = f"`\uD83D\uDD25 - Main Commands`\n`> ascii <message>` - Sends message as ascii art. \n`> embed <message>` - Sends embed message.\n`> av <@user>` - Sends your avatar in the chat.\n`> guildicon` - Shows server (guild) icon.\n`> serverinfo` - Shows server info.\n`> whois <@user>` - Sends info about user.\n`> hypesquad <house>` - Allows you to change your hypesquad house/badge.\n`> purge <number of messages>` - Deletes messages.\n`> suggest <question>` - Sends question with embed leaving thumbsup & thumbsdown react."
             await ctx.send(embed=embed)
         elif str(category).lower() == "mass":
             embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
