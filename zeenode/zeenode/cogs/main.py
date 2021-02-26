@@ -69,7 +69,7 @@ class Main(zeenode.Cog):
             embed.add_field(name="`\uD83D\uDD25 - Main`", value="Shows all **main** commands.", inline=False)
             embed.add_field(name="`\uD83D\uDEE1\uFE0F - Mass`", value="Shows all **mass** commands.", inline=False)
             embed.add_field(name="`\uD83D\uDD1E - Nsfw`", value="Shows all **nsfw** commands.", inline=False)
-            embed.add_field(name="`\uD83D\uDCC3 - Text Encoding`", value="Shows all **text encoding** commands.", inline=False)
+            embed.add_field(name="`\uD83D\uDCC3 - TextEncoding`", value="Shows all **text encoding** commands.", inline=False)
             await ctx.send(embed=embed)
         elif str(category).lower() == "activity":
             embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
