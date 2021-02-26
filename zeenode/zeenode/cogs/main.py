@@ -75,7 +75,7 @@ class Main(zeenode.Cog):
             embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
             embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
                             icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
-            embed.set_image(url="https://cdn.discordapp.com/attachments/796868392095186976/813534281405825075/zeenode.gif")
+            embed.set_image(url="https://raw.githubusercontent.com/zeenode/selfbot-site/master/img/banner.gif")
             embed.description = f"`\uD83D\uDCF1 - Activity Commands`\n`> listening <text>` - Shows listening status.\n`> playing <text>` - Shows playing status.\n`> watching <text>` - Shows watching status.\n`> streaming <text>` - Shows streaming status.\n`> stopactivity` - Stops activity."
             await ctx.send(embed=embed)
         elif str(category).lower() == "currency":
