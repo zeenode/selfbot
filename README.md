@@ -34,7 +34,7 @@
 
 ## Commands / How to use?
 ###### Type (prefix)help (ex. $help) to see list of categories !
-###### Type (prefix)help (category) (ex. $help fun) to see list of commands in category !
+###### Type (prefix)help (category) (ex. $help textencoding) to see list of commands in category !
 
 
 
