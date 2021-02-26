@@ -83,7 +83,7 @@ class Main(zeenode.Cog):
             embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
                             icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
             embed.set_image(url="https://cdn.discordapp.com/attachments/796868392095186976/813534281405825075/zeenode.gif")
-            embed.description = f"`\uD83D\uDCB0 - Currency Commands`\n`> btc` - Shows BitCoin price. \n`> doge` - Shows Doge price.\n`> eth` - Shows Ethereum price.\n`> xmr` - Shows Monero price.\n`> xrp` - Shows Ripple price."
+            embed.description = f"`\uD83D\uDCB0 - Currency Commands`\n`> btc` - Shows Bitcoin price. \n`> doge` - Shows Doge price.\n`> eth` - Shows Ethereum price.\n`> xmr` - Shows Monero price.\n`> xrp` - Shows Ripple price."
             await ctx.send(embed=embed)
         elif str(category).lower() == "emoticons":
             embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
