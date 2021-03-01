@@ -16,32 +16,32 @@ class encode(zeenode.Cog):
     
 
     @zeenode.command()
-    async def encode_md5(self, ctx, message):
+    async def encode_md5(self, ctx, *, args):
         await ctx.message.delete()
-        msg = hashlib.md5(message.encode())
+        msg = hashlib.md5(args.encode())
         crnja =  msg.hexdigest()
         await ctx.send(crnja)
 
     @zeenode.command()
-    async def encode_sha1(self, ctx, message):
+    async def encode_sha1(self, ctx, *, args):
         await ctx.message.delete()
-        msg = hashlib.sha1(message.encode())
-        crnja =  msg.hexdigest()
-        await ctx.send(crnja)
-
-
-    @zeenode.command()
-    async def encode_sha384(self, ctx, message):
-        await ctx.message.delete()
-        msg = hashlib.sha3_384(message.encode())
+        msg = hashlib.sha1(args.encode())
         crnja =  msg.hexdigest()
         await ctx.send(crnja)
 
 
     @zeenode.command()
-    async def encode_sha224(self, ctx, message):
+    async def encode_sha384(self, ctx, *, args):
         await ctx.message.delete()
-        msg = hashlib.sha3_224(message.encode())
+        msg = hashlib.sha3_384(args.encode())
+        crnja =  msg.hexdigest()
+        await ctx.send(crnja)
+
+
+    @zeenode.command()
+    async def encode_sha224(self, ctx, *, args):
+        await ctx.message.delete()
+        msg = hashlib.sha3_224(args.encode())
         crnja =  msg.hexdigest()
         await ctx.send(crnja)
 
