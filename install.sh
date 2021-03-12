@@ -4,4 +4,3 @@ if [ ! -f "$p" ]; then
 else
 	$p install -r requirements.txt
 fi
-
