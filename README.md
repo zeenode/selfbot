@@ -1,3 +1,0 @@
-# goodbye !
-
-### equals & eqwyz
