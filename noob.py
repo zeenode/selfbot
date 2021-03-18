@@ -1,1 +1,0 @@
-print("owersite & void noob")
