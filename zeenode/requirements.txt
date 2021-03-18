@@ -1,8 +1,0 @@
-discord.py
-colorama
-aiohttp
-requests
-pyfiglet
-datetime
-urllib3
-asyncio
