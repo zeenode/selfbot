@@ -162,7 +162,6 @@ class Main(zeenode.Cog):
                             description=f"{ctx.guild.member_count} Members\n {len(ctx.guild.roles)} Roles\n {len(ctx.guild.text_channels)} Text-Channels\n {len(ctx.guild.voice_channels)} Voice-Channels\n {len(ctx.guild.categories)} Categories",
                             timestamp=datetime.datetime.utcnow(), color=0x0000)
         embed.add_field(name="Server created at", value=f"{ctx.guild.created_at.strftime(date_format)}")
-        embed.add_field(name="Server Owner", value=f"{ctx.message.guild.owner}")
         embed.add_field(name="Server Region", value=f"{ctx.guild.region}")
         embed.add_field(name="Server ID", value=f"{ctx.guild.id}")
         embed.set_thumbnail(url=f"{ctx.guild.icon_url}")
