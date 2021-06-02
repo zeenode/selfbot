@@ -124,7 +124,7 @@ class Main(zeenode.Cog):
             embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
             embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
                             icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
-            embed.set_image(url="https://cdn.discordapp.com/attachments/796868392095186976/813534281405825075/zeenode.gif")
+            embed.set_image(url="https://raw.githubusercontent.com/zeenode/selfbot-site/master/img/banner.gif")
             embed.description = f"`\uD83D\uDCC3 - Text Encoding Commands`\n`> encode_base64 <word/message>` - Encodes text with Base64.\n`> encode_leet <word/message>` - Encodes text with leet speak.\n`> encode_md5 <word/message>` - Encodes text with MD5 hash.\n`> encode_sha1 <word/message>` - Encodes text with Sha1.\n`> encode_sha224 <word/message>` - Encodes text wish SHA224.\n`> encode_sha384 <word/message>` - Encodes text with Sha384.\n`> encode_sha251 <word/message>` - Encodes text with Sha512."
             await ctx.send(embed=embed)
 
