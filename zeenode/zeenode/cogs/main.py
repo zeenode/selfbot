@@ -159,7 +159,7 @@ class Main(zeenode.Cog):
         await ctx.message.delete()
         date_format = "%a, %d %b %Y %I:%M %p"
         embed = discord.Embed(title=f"Server Info of {ctx.guild.name}:",
-                            description=f"{len(ctx.guild.member_count)} Members\n {len(ctx.guild.roles)} Roles\n {len(ctx.guild.text_channels)} Text-Channels\n {len(ctx.guild.voice_channels)} Voice-Channels\n {len(ctx.guild.categories)} Categories",
+                            description=f"{(ctx.guild.member_count) Members\n {len(ctx.guild.roles)} Roles\n {len(ctx.guild.text_channels)} Text-Channels\n {len(ctx.guild.voice_channels)} Voice-Channels\n {len(ctx.guild.categories)} Categories",
                             timestamp=datetime.datetime.utcnow(), color=0x0000)
         embed.add_field(name="Server created at", value=f"{ctx.guild.created_at.strftime(date_format)}")
         embed.add_field(name="Server Owner", value=f"{ctx.guild.owner.name}")
