@@ -17,7 +17,7 @@
 * Fixed some minor bugs
 * Fixed missing some import requirements
 * Added servericon aliases to guildicon command
-* Fixed misspelling in help command at section text_encoding [encode_sha251 >> encode_sha251]
+* Fixed misspelling in help command at section text_encoding [encode_sha521 >> encode_sha512]
 * Added zoki command (it doesnt make any sense, but today on this day that the change is made is our friend zoki "eqxm"'s birthday.
 * Added missing arguments listener to some of the commands such as $purge
 * Removed broken commands
