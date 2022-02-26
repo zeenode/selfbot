@@ -1,5 +1,8 @@
-import discord, requests, pyfiglet, datetime, aiohttp, urllib3, asyncio
-import io 
+from argparse import ArgumentParser
+from ctypes import ArgumentError
+from http.client import InvalidURL
+import discord, requests, pyfiglet, datetime, aiohttp, urllib3, asyncio, warnings, colorama, io
+from colorama import Fore
 from discord.ext import commands as zeenode
 from zeenode.load import token
 from zeenode.config import prefix
@@ -7,8 +10,12 @@ from zeenode.config import prefix
 bot = zeenode.Bot(command_prefix=prefix, self_bot=True)
 bot.remove_command('help')
 
-Output = "[ERROR] - "
+colorama.init()
 
+Output = "[ERROR] -"
+
+# Ignore shitty warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
 
 class Main(zeenode.Cog):
     def __init__(self, bot):
@@ -45,96 +52,35 @@ class Main(zeenode.Cog):
             print(f"{Fore.GREEN} Succesfully set your HypeSquad house to {house}!")
         except:
             print(f"{Fore.RED}{Output} {Fore.YELLOW}Failed to set your HypeSquad house to {house}.") 
-
-
-    @zeenode.command()
-    async def embed(self, ctx, *, description):
-        await ctx.message.delete()
-        embed = discord.Embed(description=description, color=0x0000)
-        await ctx.send(embed=embed)
             
 
     @zeenode.command()
     async def help(self, ctx, category=None):
         await ctx.message.delete()
         if category is None:
-            embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
-            embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
-                            icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
-            embed.set_image(url="https://cdn.discordapp.com/attachments/796868392095186976/813534281405825075/zeenode.gif")
-            embed.add_field(name="`\uD83D\uDCF1 - Activity`", value="Shows all **activity** commands.", inline=False)
-            embed.add_field(name="`\uD83D\uDCB0 - Currency`", value="Shows all **currency** commands.", inline=False)
-            embed.add_field(name="`\uD83D\uDC40 - Emoticons`", value="Shows all **emoticons** commands.", inline=False)
-            embed.add_field(name="`\uD83D\uDE02 - Fun`", value="Shows all **fun** commands.", inline=False)
-            embed.add_field(name="`\uD83D\uDD25 - Main`", value="Shows all **main** commands.", inline=False)
-            embed.add_field(name="`\uD83D\uDEE1\uFE0F - Mass`", value="Shows all **mass** commands.", inline=False)
-            embed.add_field(name="`\uD83D\uDD1E - Nsfw`", value="Shows all **nsfw** commands.", inline=False)
-            embed.add_field(name="`\uD83D\uDCC3 - TextEncoding`", value="Shows all **text encoding** commands.", inline=False)
-            await ctx.send(embed=embed)
+            await ctx.send("Zeenode Self-Bot | Prefix: " + str(bot.command_prefix) + "\n" + "`\uD83D\uDCF1 - Activity`" + " - " + "Shows all **activity** commands." + "\n" + "`\uD83D\uDCB0 - Currency`" + " - " + "Shows all **currency** commands." + "\n" + "`\uD83D\uDC40 - Emoticons`" + " - " + "Shows all **emoticons** commands." + "\n" + "`\uD83D\uDE02 - Fun`" + " - " + "Shows all **fun** commands." + "\n" + "`\uD83D\uDD25 - Main`" + " - " + "Shows all **main** commands." + "\n" + "`\uD83D\uDEE1\uFE0F - Mass`" + " - " + "Shows all **mass** commands." + "\n" + "`\uD83D\uDD1E - Nsfw`" + " - " + "Shows all **nsfw** commands." + "\n" + "`\uD83D\uDCC3 - TextEncoding`" + " - " + "Shows all **text encoding** commands.")
         elif str(category).lower() == "activity":
-            embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
-            embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
-                            icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
-            embed.set_image(url="https://raw.githubusercontent.com/zeenode/selfbot-site/master/img/banner.gif")
-            embed.description = f"`\uD83D\uDCF1 - Activity Commands`\n`> listening <text>` - Shows listening status.\n`> playing <text>` - Shows playing status.\n`> watching <text>` - Shows watching status.\n`> streaming <text>` - Shows streaming status.\n`> stopactivity` - Stops activity."
-            await ctx.send(embed=embed)
+            await ctx.send(f"`\uD83D\uDCF1 - Activity Commands`\n`" + str(bot.command_prefix) + " listening <text>` - Shows listening status.\n`" + str(bot.command_prefix) + " playing <text>` - Shows playing status.\n`" + str(bot.command_prefix) + " watching <text>` - Shows watching status.\n`" + str(bot.command_prefix) + " streaming <text>` - Shows streaming status.\n`" + str(bot.command_prefix) + " stopactivity` - Stops activity.")
         elif str(category).lower() == "currency":
-            embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
-            embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
-                            icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
-            embed.set_image(url="https://cdn.discordapp.com/attachments/796868392095186976/813534281405825075/zeenode.gif")
-            embed.description = f"`\uD83D\uDCB0 - Currency Commands`\n`> btc` - Shows Bitcoin price. \n`> doge` - Shows Doge price.\n`> eth` - Shows Ethereum price.\n`> xmr` - Shows Monero price.\n`> xrp` - Shows Ripple price."
-            await ctx.send(embed=embed)
+            await ctx.send(f"`\uD83D\uDCB0 - Currency Commands`\n`" + str(bot.command_prefix) + " btc` - Shows Bitcoin price. \n`" + str(bot.command_prefix) + " doge` - Shows Doge price.\n`" + str(bot.command_prefix) + " eth` - Shows Ethereum price.\n`" + str(bot.command_prefix) + " xmr` - Shows Monero price.\n`" + str(bot.command_prefix) + " xrp` - Shows Ripple price.")
         elif str(category).lower() == "emoticons":
-            embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
-            embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
-                            icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
-            embed.set_image(url="https://cdn.discordapp.com/attachments/796868392095186976/813534281405825075/zeenode.gif")
-            embed.description = f"`\uD83D\uDC40 - Emoticons Commands`\n`> fuckyou` - Sends fuckyou emoticon. \n`> lenny` - Sends lenny emoticon.\n`> what` - Sends what emoticon.\n`> bear` - Sends bear emoticon.\n`> worried` - Sends worried emoticon.\n`> ak47` - Sends ak47 emoticon.\n`> awp` - Sends awp emoticon.\n`> lmg` - Sends lmg emoticon.\n`> sword` - Sends sword emoticon.\n`> love` - Sends love emoticon.\n`> goodnight` - Sends goodnight emoticon.\n`> smile` - Sends smile emoticon."
-            await ctx.send(embed=embed)
+            await ctx.send(f"`\uD83D\uDC40 - Emoticons Commands`\n`" + str(bot.command_prefix) + " fuckyou` - Sends fuckyou emoticon. \n`" + str(bot.command_prefix) + " lenny` - Sends lenny emoticon.\n`" + str(bot.command_prefix) + " what` - Sends what emoticon.\n`" + str(bot.command_prefix) + " bear` - Sends bear emoticon.\n`" + str(bot.command_prefix) + " worried` - Sends worried emoticon.\n`" + str(bot.command_prefix) + " ak47` - Sends ak47 emoticon.\n`" + str(bot.command_prefix) + " awp` - Sends awp emoticon.\n`" + str(bot.command_prefix) + " lmg` - Sends lmg emoticon.\n`" + str(bot.command_prefix) + " sword` - Sends sword emoticon.\n`" + str(bot.command_prefix) + " love` - Sends love emoticon.\n`" + str(bot.command_prefix) + " goodnight` - Sends goodnight emoticon.\n`" + str(bot.command_prefix) + " smile` - Sends smile emoticon.")
         elif str(category).lower() == "fun":
-            embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
-            embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
-                            icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
-            embed.set_image(url="https://cdn.discordapp.com/attachments/796868392095186976/813534281405825075/zeenode.gif")
-            embed.description = f"`\uD83D\uDE02 - Fun Commands`\n`> cat` - Sends a random cat image.\n`> dog` - Sends a random dog image.\n`> panda` - Sends a random panda image.\n`> dick <@user>` - Shows user dick size.\n`> hug <@user>` - Sends a hug to user.\n`> kiss <@user>` - Sends a kiss to user.\n`> slap <@user>` - Sends a slap to user.\n`> meme` - Sends a random meme.\n`> nitro` - Sends a nitro."
-            await ctx.send(embed=embed)
+            await ctx.send(f"`\uD83D\uDE02 - Fun Commands`\n`" + str(bot.command_prefix) + " cat` - Sends a random cat image.\n`" + str(bot.command_prefix) + " dog` - Sends a random dog image.\n`" + str(bot.command_prefix) + " panda` - Sends a random panda image.\n`" + str(bot.command_prefix) + " dick <@user>` - Shows user dick size.\n`" + str(bot.command_prefix) + " hug <@user>` - Sends a hug to user.\n`" + str(bot.command_prefix) + " kiss <@user>` - Sends a kiss to user.\n`" + str(bot.command_prefix) + " slap <@user>` - Sends a slap to user.\n`" + str(bot.command_prefix) + " meme` - Sends a random meme.\n`" + str(bot.command_prefix) + " nitro` - Sends a nitro." + "\n`" + str(bot.command_prefix) + " zoki` - Sends a picture of zoki")
         elif str(category).lower() == "main":
-            embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
-            embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
-                            icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
-            embed.set_image(url="https://cdn.discordapp.com/attachments/796868392095186976/812744896439910450/zeenode_banner.gif")
-            embed.description = f"`\uD83D\uDD25 - Main Commands`\n`> ascii <message>` - Sends message as ascii art. \n`> embed <message>` - Sends embed message.\n`> av <@user>` - Sends your avatar in the chat.\n`> guildicon` - Shows server (guild) icon.\n`> serverinfo` - Shows server info.\n`> whois <@user>` - Sends info about user.\n`> hypesquad <house>` - Allows you to change your hypesquad house/badge.\n`> purge <number of messages>` - Deletes messages.\n`> suggest <question>` - Sends question with embed leaving thumbsup & thumbsdown react."
-            await ctx.send(embed=embed)
+            await ctx.send(f"`\uD83D\uDD25 - Main Commands`\n`" + str(bot.command_prefix) + " ascii <message>` - Sends message as ascii art. \n`" + str(bot.command_prefix) + " av <@user>` - Sends your avatar in the chat.\n`" + str(bot.command_prefix) + " servericon` - Shows server's (guild) icon.\n`" + str(bot.command_prefix) + " serverinfo` - Shows server info.\n`" + str(bot.command_prefix) + " whois <@user>` - Sends info about user.\n`" + str(bot.command_prefix) + " hypesquad <house>` - Allows you to change your hypesquad house/badge.\n`" + str(bot.command_prefix) + " purge <number of messages>` - Deletes messages.\n`" + str(bot.command_prefix) + " suggest <question>` - Sends question with embed leaving thumbsup & thumbsdown react.")
         elif str(category).lower() == "mass":
-            embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
-            embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
-                            icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
-            embed.set_image(url="https://cdn.discordapp.com/attachments/796868392095186976/813534281405825075/zeenode.gif")
-            embed.description = f"`\uD83D\uDEE1\uFE0F - Mass Commands`\n`> massreact <emoji>` - Reacts to last 20 messages with emojis.\n`> spam <number of messages> <message> ` - Spams messages."
-            await ctx.send(embed=embed)
+            await ctx.send(f"`\uD83D\uDEE1\uFE0F - Mass Commands`\n`" + str(bot.command_prefix) + " massreact <emoji>` - Reacts to last 20 messages with emojis.\n`" + str(bot.command_prefix) + " spam <number of messages> <message> ` - Spams messages.")
         elif str(category).lower() == "nsfw":
-            embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
-            embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
-                            icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
-            embed.set_image(url="https://cdn.discordapp.com/attachments/796868392095186976/813534281405825075/zeenode.gif")
-            embed.description = f"`\uD83D\uDD1E - Nsfw Commands`\n`> anal <user>` - Sends nsfw anime content.\n`> blowjob <user>` - Sends nsfw anime content.\n`> boobs <user>` - Sends nsfw anime content.\n`> hentai <user>` - Sends hentai (anime porn)."
-            await ctx.send(embed=embed)
+            await ctx.send(f"`\uD83D\uDD1E - Nsfw Commands`\n`" + str(bot.command_prefix) + " anal <user>` - Sends nsfw anime content.\n`" + str(bot.command_prefix) + " blowjob <user>` - Sends nsfw anime content.\n`" + str(bot.command_prefix) + " boobs <user>` - Sends nsfw anime content.\n`" + str(bot.command_prefix) + " hentai <user>` - Sends hentai (anime porn).")
         elif str(category).lower() == "textencoding":
-            embed = discord.Embed(color=0x0000, timestamp=ctx.message.created_at)
-            embed.set_author(name="Zeenode Self-Bot | Prefix: " + str(bot.command_prefix),
-                            icon_url="https://cdn.discordapp.com/attachments/796868392095186976/812453623309008927/zeenode_logo.png")
-            embed.set_image(url="https://raw.githubusercontent.com/zeenode/selfbot-site/master/img/banner.gif")
-            embed.description = f"`\uD83D\uDCC3 - Text Encoding Commands`\n`> encode_base64 <word/message>` - Encodes text with Base64.\n`> encode_leet <word/message>` - Encodes text with leet speak.\n`> encode_md5 <word/message>` - Encodes text with MD5 hash.\n`> encode_sha1 <word/message>` - Encodes text with Sha1.\n`> encode_sha224 <word/message>` - Encodes text wish SHA224.\n`> encode_sha384 <word/message>` - Encodes text with Sha384.\n`> encode_sha251 <word/message>` - Encodes text with Sha512."
-            await ctx.send(embed=embed)
+            await ctx.send(f"`\uD83D\uDCC3 - Text Encoding Commands`\n`" + str(bot.command_prefix) + " encode_base64 <word/message>` - Encodes text with Base64.\n`" + str(bot.command_prefix) + " encode_leet <word/message>` - Encodes text with leet speak.\n`" + str(bot.command_prefix) + " encode_md5 <word/message>` - Encodes text with MD5 hash.\n`" + str(bot.command_prefix) + " encode_sha1 <word/message>` - Encodes text with Sha1.\n`" + str(bot.command_prefix) + " encode_sha224 <word/message>` - Encodes text wish SHA224.\n`" + str(bot.command_prefix) + " encode_sha384 <word/message>` - Encodes text with Sha384.\n`" + str(bot.command_prefix) + " encode_sha512 <word/message>` - Encodes text with Sha512.")
 
 
     @zeenode.command(aliases=["suggestion"])
     async def suggest(self, ctx, *, suggestion):
         await ctx.message.delete()
-        embed = discord.Embed(title="Suggestion:", color=0x0000, description=suggestion)
-        embed.set_thumbnail(url="")
-        msg = await ctx.send(embed=embed)
+        msg = await ctx.send("Suggestion: " + suggestion)
         await msg.add_reaction('\U0001F44D')
         await msg.add_reaction('\U0001F44E')
             
@@ -158,25 +104,26 @@ class Main(zeenode.Cog):
     async def serverinfo(self,ctx):
         await ctx.message.delete()
         date_format = "%a, %d %b %Y %I:%M %p"
-        embed = discord.Embed(title=f"Server Info of {ctx.guild.name}:",
-                            description=f"{ctx.guild.member_count} Members\n {len(ctx.guild.roles)} Roles\n {len(ctx.guild.text_channels)} Text-Channels\n {len(ctx.guild.voice_channels)} Voice-Channels\n {len(ctx.guild.categories)} Categories",
-                            timestamp=datetime.datetime.utcnow(), color=0x0000)
-        embed.add_field(name="Server created at", value=f"{ctx.guild.created_at.strftime(date_format)}")
-        embed.add_field(name="Server Owner", value=f"<@{ctx.guild.owner_id}>")
-        embed.add_field(name="Server Region", value=f"{ctx.guild.region}")
-        embed.add_field(name="Server ID", value=f"{ctx.guild.id}")
-        embed.set_thumbnail(url=f"{ctx.guild.icon_url}")
-        await ctx.send(embed=embed)
+        try:
+            await ctx.send(f"Server Info of {ctx.guild.name}:" + "\n" + "Server created at" + " - " + f"{ctx.guild.created_at.strftime(date_format)}" + "\n" + "Server Owner" + " - " + f"<@{ctx.guild.owner_id}>" + "\n" + "Server ID" + " - " + f"{ctx.guild.id}" + "\n" + f"{ctx.guild.member_count} Members\n{len(ctx.guild.roles)} Roles\n{len(ctx.guild.text_channels)} Text-Channels\n{len(ctx.guild.voice_channels)} Voice-Channels\n{len(ctx.guild.categories)} Categories")
+        except AttributeError:
+            print(f"{Fore.RED}{Output} {Fore.YELLOW}You tried to get info of someones dm not a server!") 
 
         
-    @zeenode.command()
+    @zeenode.command(aliases=["servericon"])
     async def guildicon(self, ctx):
         await ctx.message.delete()
-        embed = discord.Embed(color=0x0000)
-        embed.set_author(name=ctx.guild.name, icon_url=ctx.guild.icon_url)   
-        embed.set_image(url=ctx.guild.icon_url)
-        await ctx.send(embed=embed)
-        
+        async with aiohttp.ClientSession() as session:
+            try:
+                async with session.get(str(ctx.guild.icon_url)) as resp:
+                    if resp.status != 200:
+                        return await ctx.send('Could not download file...')
+                    data = io.BytesIO(await resp.read())
+                    await ctx.send(file=discord.File(data, 'img.png'))
+            except AttributeError:
+                print(f"{Fore.RED}{Output} {Fore.YELLOW}You tried to get icon of someones dm not a server!")
+            except:
+                 print(f"{Fore.RED}{Output} {Fore.YELLOW}This server doesn't have an icon set!")
 
     @zeenode.command()
     async def whois(self, ctx, *, user: discord.User = None): 
@@ -184,14 +131,10 @@ class Main(zeenode.Cog):
         if user is None:
             user = ctx.author      
         date_format = "%a, %d %b %Y %I:%M %p"
-        em = discord.Embed(description=user.mention)
-        em.set_author(name=str(user), icon_url=user.avatar_url)
-        em.set_thumbnail(url=user.avatar_url)
-        em.add_field(name="Registered", value=user.created_at.strftime(date_format))
-        return await ctx.send(embed=em)
+        return await ctx.send("Registered: " + user.created_at.strftime(date_format))
       
       
-    @zeenode.command()
+    @zeenode.command(aliases=["clear"])
     async def purge(self, ctx, amount: int):
         await ctx.message.delete()
         async for message in ctx.message.channel.history(limit=amount).filter(lambda m: m.author == self.bot.user).map(lambda m: m):
@@ -199,6 +142,12 @@ class Main(zeenode.Cog):
                 await message.delete()
             except:
                 pass
+
+    @zeenode.Cog.listener()
+    async def on_command_error(self, ctx, error):
+        if isinstance(error, zeenode.MissingRequiredArgument):
+            await ctx.message.delete()
+            print(f"{Fore.RED}{Output} {Fore.YELLOW}You need to specify how many messages you would like to delete!")
 
 def setup(bot):
     bot.add_cog(Main(bot))

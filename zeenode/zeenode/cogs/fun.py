@@ -5,15 +5,21 @@ class Fun(zeenode.Cog):
     def __init__(self, bot):
         self.bot = bot
  
-
     @zeenode.command()
     async def slap(self, ctx, user: discord.User = None):
         await ctx.message.delete()
         r = requests.get("https://nekos.life/api/v2/img/slap")
         res = r.json()
-        embed = discord.Embed(description=f"**{ctx.author.mention} slapped {user.mention}!**", color=0x0000)
-        embed.set_image(url=res["url"])
-        await ctx.send(embed=embed)
+        async with aiohttp.ClientSession() as session:
+            async with session.get(res["url"]) as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                try:
+                    await ctx.send(file=discord.File(data, 'img.png'))
+                    await ctx.send(user.mention + " This could be you and me")
+                except:
+                    pass
 
         
     @zeenode.command()
@@ -21,9 +27,16 @@ class Fun(zeenode.Cog):
         await ctx.message.delete()
         r = requests.get("https://nekos.life/api/v2/img/hug")
         res = r.json()
-        embed = discord.Embed(description=f"**{ctx.author.mention} hugged {user.mention}!**", color=0x0000)
-        embed.set_image(url=res["url"])
-        await ctx.send(embed=embed)
+        async with aiohttp.ClientSession() as session:
+            async with session.get(res["url"]) as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                try:
+                    await ctx.send(file=discord.File(data, 'img.png'))
+                    await ctx.send(user.mention + " This could be you and me")
+                except:
+                    pass
 
         
     @zeenode.command(aliases=['dong', 'penis'])
@@ -35,20 +48,36 @@ class Fun(zeenode.Cog):
         dong = ""
         for _i in range(0, size):
             dong += "="
-        em = discord.Embed(title=f"{user}'s Dick size:", description=f"8{dong}D", colour=0x0000)
-        await ctx.send(embed=em)
+        await ctx.send(f"{user}'s Dick size:\n" + f"8{dong}D")
     
-
-    
+    @zeenode.command()
+    async def zoki(self, ctx):
+        await ctx.message.delete()
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://cdn.discordapp.com/attachments/931953860988252170/947183625932267541/unknown.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                try:
+                    await ctx.send(file=discord.File(data, 'img.png'))
+                except:
+                    pass
     
     @zeenode.command()
     async def kiss(self, ctx, user: discord.User = None):
         await ctx.message.delete()
         r = requests.get("https://nekos.life/api/v2/img/kiss")
         res = r.json()
-        embed = discord.Embed(description=f"**{ctx.author.mention} kissed {user.mention}!**", color=0x0000)
-        embed.set_image(url=res["url"])
-        await ctx.send(embed=embed)
+        async with aiohttp.ClientSession() as session:
+            async with session.get(res["url"]) as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                try:
+                    await ctx.send(file=discord.File(data, 'img.png'))
+                    await ctx.send(user.mention + " This could be you and me")
+                except:
+                    pass
      
    
     
@@ -56,40 +85,60 @@ class Fun(zeenode.Cog):
     async def panda(self, ctx):
         await ctx.message.delete()
         r = requests.get("https://some-random-api.ml/img/panda").json()
-        embed = discord.Embed(color=0x0000)
-        embed.set_author(name="Random Panda.", icon_url="https://cdn.freebiesupply.com/logos/large/2x/panda-7-logo-png-transparent.png") 
-        embed.set_image(url=str(r["link"]))
-        await ctx.send(embed=embed)    
+        async with aiohttp.ClientSession() as session:
+            async with session.get(str(r["link"])) as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                try:
+                    await ctx.send(file=discord.File(data, 'img.png'))
+                except:
+                    pass
     
     
     @zeenode.command()
     async def meme(self, ctx):
         await ctx.message.delete()
         r = requests.get("https://some-random-api.ml/meme").json()
-        embed = discord.Embed(color=0x0000)
-        embed.set_author(name="Random Meme.", icon_url="https://freepngimg.com/thumb/internet_meme/3-2-troll-face-meme-png-thumb.png") 
-        embed.set_image(url=str(r["image"]))
-        await ctx.send(embed=embed)
+        async with aiohttp.ClientSession() as session:
+            async with session.get(str(r["image"])) as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                try:
+                    await ctx.send(file=discord.File(data, 'img.png'))
+                except:
+                    pass
 
         
     @zeenode.command()
     async def cat(self, ctx):
         await ctx.message.delete()
         r = requests.get("https://some-random-api.ml/img/cat").json()
-        embed = discord.Embed(color=0x0000)
-        embed.set_author(name="Random Cat.", icon_url="https://cdn.discordapp.com/attachments/796868392095186976/810566027637162034/zeenode_cat.png") 
-        embed.set_image(url=str(r["link"]))
-        await ctx.send(embed=embed)   
+        async with aiohttp.ClientSession() as session:
+            async with session.get(str(r["link"])) as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                try:
+                    await ctx.send(file=discord.File(data, 'img.png'))
+                except:
+                    pass 
     
     
     @zeenode.command()
     async def dog(self, ctx):
         await ctx.message.delete()
         r = requests.get("https://some-random-api.ml/img/dog").json()
-        embed = discord.Embed(color=0x0000)
-        embed.set_author(name="Random Dog." , icon_url="https://cdn.discordapp.com/attachments/796868392095186976/810566380545114172/zeenode_dog.png") 
-        embed.set_image(url=str(r["link"]))
-        await ctx.send(embed=embed)    
+        async with aiohttp.ClientSession() as session:
+            async with session.get(str(r["link"])) as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                try:
+                    await ctx.send(file=discord.File(data, 'img.png'))
+                except:
+                    pass  
 
 
     @zeenode.command()
