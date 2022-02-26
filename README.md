@@ -11,6 +11,18 @@
 
 - This project is mainly made for people who want to understand discord.py lib for python so that they can develop their skills in using it. Discord prohibits Selfbots so if you want to use this you will use it at your own risk.
 
+### Changelog 2/26/2022/
+*Discord disabled normal users (non bots) from sending embed texts, so all the commands are re-done to not have embed. Everything is now functional!
+*Fixed some deprecated error messages
+*Fixed some minor bugs
+*Fixed missing some import requirements
+*Added servericon aliases to guildicon command
+*Fixed misspelling in help command at section text_encoding [encode_sha251 >> encode_sha251]
+*Added zoki command (it doesnt make any sense, but today on this day that the change is made is our friend zoki "eqxm"'s birthday.
+*Added missing arguments listener to some of the commands such as $purge
+*Removed broken commands
+*50+ commands updated.
+
 # WARNING!!!
 
 - You agree not to (and not to attempt to) (i) use the Service for any use or purpose other than as expressly permitted by these Terms;(ii) copy, adapt, modify, prepare derivative works based upon, distribute, license, sell, transfer, publicly display, publicly perform, transmit, stream, broadcast, attempt to discover any source code, reverse engineer, decompile, disassemble, or otherwise exploit the Service or any portion of the Service, except as expressly permitted in these Terms; or (iii) use data mining, robots, spiders, or similar data gathering and extraction tools on the Service.
