@@ -1,5 +1,12 @@
-import discord, pyfiglet, requests
+import discord, pyfiglet, requests, io, aiohttp, warnings, colorama
+from colorama import Fore
+from http.client import HTTPException
 from discord.ext import commands as zeenode 
+
+# Ignore shitty warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
+
+Output = "[ERROR] -"
 
 class nsfw(zeenode.Cog):
     def __init__(self, bot):
@@ -11,10 +18,17 @@ class nsfw(zeenode.Cog):
         await ctx.message.delete()
         api = requests.get("https://nekos.life/api/v2/img/blowjob")
         json = api.json()
-        msg = discord.Embed(description=user.mention + " This could be you and me")
-        msg.set_image(url=json['url'])
-        
-        await ctx.send(embed=msg)
+        async with aiohttp.ClientSession() as session:
+            async with session.get(json['url']) as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                try:
+                    await ctx.send(file=discord.File(data, 'img.png'))
+                    await ctx.send(user.mention + " This could be you and me")
+                except HTTPException:
+                    print(f"{Fore.RED}{Output} {Fore.YELLOW}This user has disabled NSFW content in their dms")
+
 
 
     @zeenode.command()
@@ -22,10 +36,16 @@ class nsfw(zeenode.Cog):
         await ctx.message.delete()
         api = requests.get("https://nekos.life/api/v2/img/boobs")
         json = api.json()
-        msg = discord.Embed(description=user.mention + " This could be you and me ")
-        msg.set_image(url=json['url'])
-        
-        await ctx.send(embed=msg)
+        async with aiohttp.ClientSession() as session:
+            async with session.get(json['url']) as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                try:
+                    await ctx.send(file=discord.File(data, 'img.png'))
+                    await ctx.send(user.mention + " This could be you and me")
+                except HTTPException:
+                    print(f"{Fore.RED}{Output} {Fore.YELLOW}This user has disabled NSFW content in their dms")
     
     
     @zeenode.command()
@@ -33,10 +53,16 @@ class nsfw(zeenode.Cog):
         await ctx.message.delete()
         api = requests.get("https://nekos.life/api/v2/img/anal")
         json = api.json()
-        msg = discord.Embed(description=user.mention + " This could be you and me ")
-        msg.set_image(url=json['url'])
-        
-        await ctx.send(embed=msg)
+        async with aiohttp.ClientSession() as session:
+            async with session.get(json['url']) as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                try:
+                    await ctx.send(file=discord.File(data, 'img.png'))
+                    await ctx.send(user.mention + " This could be you and me")
+                except HTTPException:
+                    print(f"{Fore.RED}{Output} {Fore.YELLOW}This user has disabled NSFW content in their dms")
     
     
     @zeenode.command()
@@ -44,10 +70,16 @@ class nsfw(zeenode.Cog):
         await ctx.message.delete()
         api = requests.get("https://nekos.life/api/v2/img/Random_hentai_gif")
         json = api.json()
-        msg = discord.Embed(description=user.mention + " This could be you and me ")
-        msg.set_image(url=json['url'])
-        
-        await ctx.send(embed=msg)
+        async with aiohttp.ClientSession() as session:
+            async with session.get(json['url']) as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                try:
+                    await ctx.send(file=discord.File(data, 'img.png'))
+                    await ctx.send(user.mention + " This could be you and me")
+                except HTTPException:
+                    print(f"{Fore.RED}{Output} {Fore.YELLOW}This user has disabled NSFW content in their dms")
 
 
 def setup(bot):

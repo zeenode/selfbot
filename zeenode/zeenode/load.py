@@ -31,8 +31,8 @@ class load:
                             {Fore.LIGHTBLACK_EX}║ {Fore.WHITE}╚═╝ ╚═╝ ╚═╝ ╝╚╝ ╚═╝ ═╩╝ ╚═╝ {Fore.LIGHTBLACK_EX}║
                             {Fore.LIGHTBLACK_EX}╚═════════════════════════════╝
                                 {Fore.WHITE}Logged in as {Fore.LIGHTGREEN_EX}{bot.user}
-                             {Fore.WHITE}You are currently  in {Fore.LIGHTGREEN_EX}{len(list(bot.guilds))}{Fore.WHITE} server(s).
-                          {Fore.WHITE}You have {Fore.LIGHTGREEN_EX}{len(list(bot.user.friends))}{Fore.WHITE} Friend(s) in friend list.
+                             {Fore.WHITE}You are currently in {Fore.LIGHTGREEN_EX}{len(list(bot.guilds))}{Fore.WHITE} server(s).
+                            {Fore.WHITE}You have {Fore.LIGHTGREEN_EX}{len(list(bot.user.friends))}{Fore.WHITE} Friend(s) in friend list.
                    {Fore.WHITE}Zeenode's prefix is {Fore.LIGHTGREEN_EX}{prefix}{Fore.WHITE}, for command-list type {Fore.LIGHTGREEN_EX}{prefix}help{Fore.WHITE}.
                               {Fore.LIGHTBLACK_EX}[{nsign}{Fore.LIGHTBLACK_EX}] {Fore.WHITE}Nitro Sniper is {nsniper}{Fore.WHITE}.
                               {Fore.LIGHTBLACK_EX}[{gsign}{Fore.LIGHTBLACK_EX}] {Fore.WHITE}Giveaway Sniper is {gsniper}{Fore.WHITE}.
