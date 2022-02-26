@@ -153,7 +153,7 @@ $**encode_sha224** *(word/message)* - Encodes text wish SHA224.
 
 $**encode_sha384** *(word/message)* - Encodes text with Sha384.
 
-$**Encode_sha251** *(word/message)* - Encodes text with Sha512.
+$**Encode_sha212** *(word/message)* - Encodes text with Sha512.
 
 
 
@@ -186,6 +186,8 @@ $**hentai** *(User Tag)* - Sends hentai. ( Anime porn )
 - $watching, $listening or $playing won't work if you actually have already an activity! 
 - Only $streaming will work!
 
+- To Get help with commands type (prefix)"$help main" and from there you can use $help and the name of category.
+- Command zoki makes no sense. It is added because today is my good friend's "eqxm" aka. zoki birthday.
 
 # Disclaimer:
 
