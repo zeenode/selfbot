@@ -1,0 +1,2 @@
+language = "bash"
+run = "python zeenode/launch.py"

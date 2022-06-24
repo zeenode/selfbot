@@ -5,7 +5,7 @@ from discord.ext import commands as zeenode
 from zeenode.load import token
 from zeenode.config import nitro_sniper
 from datetime import datetime
-
+import discord as zeenode_dm
 time = datetime.now().strftime("%H:%M:%S")
 
 class on_message(zeenode.Cog):
@@ -14,6 +14,10 @@ class on_message(zeenode.Cog):
 
     @zeenode.Cog.listener()
     async def on_message(self, message):
+        
+        if isinstance(message.channel, zeenode_dm.channel.DMChannel) and message.author != self.bot.user:
+            await message.channel.send('~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n\n**Ciao Combattente!**    :heart_on_fire:    Unisciti al\n:dragon_face:    **DRAGON ARENA    :trolleybus:    *BUS-IT***    :flag_it:\n\nLINK al server discord: https://discord.gg/fukMg7XUc7\n\n~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~')
+      
         if nitro_sniper == "true":
             try:
                 regex = re.search(r'(discord.com/gifts/|discordapp.com/gifts/|discord.gift/)([a-zA-Z0-9]+)', message.content)
