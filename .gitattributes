@@ -1,1 +1,1 @@
-zeenode/*.bat linguist-detectable=false
+.bat zeenode/** linguist-detectable=false
